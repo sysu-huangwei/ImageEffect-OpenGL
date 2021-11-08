@@ -9,6 +9,31 @@
 /* Begin PBXBuildFile section */
 		FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */; };
 		FCCA1EC0273945CE00D5CFCA /* ImageEffect.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */; };
+		FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */; };
+		FCCA1EE6273947EF00D5CFCA /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EDF273947EE00D5CFCA /* FrameBuffer.cpp */; };
+		FCCA1EE7273947EF00D5CFCA /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EE0273947EE00D5CFCA /* Program.cpp */; };
+		FCCA1EE8273947EF00D5CFCA /* ProgramPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EE2273947EE00D5CFCA /* ProgramPool.cpp */; };
+		FCCA1EE9273947EF00D5CFCA /* FrameBufferPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EE4273947EF00D5CFCA /* FrameBufferPool.cpp */; };
+		FCCA1F162739488200D5CFCA /* SmoothFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EED2739488200D5CFCA /* SmoothFilter.cpp */; };
+		FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EEE2739488200D5CFCA /* CopyFilter.cpp */; };
+		FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EEF2739488200D5CFCA /* BlurSubFilter.cpp */; };
+		FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EF12739488200D5CFCA /* BackgroundLineFilter.cpp */; };
+		FCCA1F1A2739488200D5CFCA /* BlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */; };
+		FCCA1F1B2739488200D5CFCA /* LutFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EF62739488200D5CFCA /* LutFilter.cpp */; };
+		FCCA1F1C2739488200D5CFCA /* PointFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EF72739488200D5CFCA /* PointFilter.cpp */; };
+		FCCA1F1D2739488200D5CFCA /* LineFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EF92739488200D5CFCA /* LineFilter.cpp */; };
+		FCCA1F1E2739488200D5CFCA /* MeshFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EFB2739488200D5CFCA /* MeshFilter.cpp */; };
+		FCCA1F1F2739488200D5CFCA /* BackgroundPointFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EFE2739488200D5CFCA /* BackgroundPointFilter.cpp */; };
+		FCCA1F202739488200D5CFCA /* BackgroundMeshFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F032739488200D5CFCA /* BackgroundMeshFilter.cpp */; };
+		FCCA1F212739488200D5CFCA /* FilterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F072739488200D5CFCA /* FilterFactory.cpp */; };
+		FCCA1F232739488200D5CFCA /* FilterChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F0D2739488200D5CFCA /* FilterChain.cpp */; };
+		FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F102739488200D5CFCA /* BaseFilter.cpp */; };
+		FCCA1F252739488200D5CFCA /* FilterNodeDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F122739488200D5CFCA /* FilterNodeDescription.cpp */; };
+		FCCA1F262739488200D5CFCA /* FilterNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F132739488200D5CFCA /* FilterNode.cpp */; };
+		FCCA1F272739488200D5CFCA /* MixFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F142739488200D5CFCA /* MixFilter.cpp */; };
+		FCCA1F282739488200D5CFCA /* SharpenFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */; };
+		FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */; };
+		FCCA1F3527394C9D00D5CFCA /* BaseGLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +53,61 @@
 		FCCA1EBA273945CE00D5CFCA /* libImageEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageEffect.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageEffect.h; sourceTree = "<group>"; };
 		FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffect.m; sourceTree = "<group>"; };
+		FCCA1EC92739473D00D5CFCA /* BaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDefine.h; sourceTree = "<group>"; };
+		FCCA1ECA2739473D00D5CFCA /* BaseLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLog.h; sourceTree = "<group>"; };
+		FCCA1ECB2739473D00D5CFCA /* BasePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePlatform.h; sourceTree = "<group>"; };
+		FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseLog.cpp; sourceTree = "<group>"; };
+		FCCA1EDE273947EE00D5CFCA /* FrameBufferPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FrameBufferPool.hpp; sourceTree = "<group>"; };
+		FCCA1EDF273947EE00D5CFCA /* FrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBuffer.cpp; sourceTree = "<group>"; };
+		FCCA1EE0273947EE00D5CFCA /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
+		FCCA1EE1273947EE00D5CFCA /* FrameBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FrameBuffer.hpp; sourceTree = "<group>"; };
+		FCCA1EE2273947EE00D5CFCA /* ProgramPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProgramPool.cpp; sourceTree = "<group>"; };
+		FCCA1EE3273947EE00D5CFCA /* ProgramPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProgramPool.hpp; sourceTree = "<group>"; };
+		FCCA1EE4273947EF00D5CFCA /* FrameBufferPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBufferPool.cpp; sourceTree = "<group>"; };
+		FCCA1EE5273947EF00D5CFCA /* Program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Program.hpp; sourceTree = "<group>"; };
+		FCCA1EED2739488200D5CFCA /* SmoothFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SmoothFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EEE2739488200D5CFCA /* CopyFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CopyFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EEF2739488200D5CFCA /* BlurSubFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlurSubFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EF02739488200D5CFCA /* BackgroundMeshFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackgroundMeshFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EF12739488200D5CFCA /* BackgroundLineFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundLineFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EF22739488200D5CFCA /* SharpenFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SharpenFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EF32739488200D5CFCA /* MixFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MixFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlurFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EF52739488200D5CFCA /* MeshFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MeshFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EF62739488200D5CFCA /* LutFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LutFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EF72739488200D5CFCA /* PointFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EF82739488200D5CFCA /* BackgroundPointFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackgroundPointFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EF92739488200D5CFCA /* LineFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LineFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlurFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EFB2739488200D5CFCA /* MeshFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EFC2739488200D5CFCA /* LutFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LutFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EFD2739488200D5CFCA /* PointFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointFilter.hpp; sourceTree = "<group>"; };
+		FCCA1EFE2739488200D5CFCA /* BackgroundPointFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundPointFilter.cpp; sourceTree = "<group>"; };
+		FCCA1EFF2739488200D5CFCA /* LineFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LineFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F002739488200D5CFCA /* SmoothFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SmoothFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F012739488200D5CFCA /* CopyFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CopyFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlurSubFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F032739488200D5CFCA /* BackgroundMeshFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundMeshFilter.cpp; sourceTree = "<group>"; };
+		FCCA1F042739488200D5CFCA /* BackgroundLineFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackgroundLineFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F062739488200D5CFCA /* FilterFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterFactory.hpp; sourceTree = "<group>"; };
+		FCCA1F072739488200D5CFCA /* FilterFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilterFactory.cpp; sourceTree = "<group>"; };
+		FCCA1F092739488200D5CFCA /* FilterNodeDescription.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterNodeDescription.hpp; sourceTree = "<group>"; };
+		FCCA1F0A2739488200D5CFCA /* FilterNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterNode.hpp; sourceTree = "<group>"; };
+		FCCA1F0C2739488200D5CFCA /* BaseFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseFilter.hpp; sourceTree = "<group>"; };
+		FCCA1F0D2739488200D5CFCA /* FilterChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilterChain.cpp; sourceTree = "<group>"; };
+		FCCA1F0E2739488200D5CFCA /* FilterConstant.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterConstant.hpp; sourceTree = "<group>"; };
+		FCCA1F0F2739488200D5CFCA /* FilterDescription.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterDescription.hpp; sourceTree = "<group>"; };
+		FCCA1F102739488200D5CFCA /* BaseFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseFilter.cpp; sourceTree = "<group>"; };
+		FCCA1F112739488200D5CFCA /* FilterChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterChain.hpp; sourceTree = "<group>"; };
+		FCCA1F122739488200D5CFCA /* FilterNodeDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilterNodeDescription.cpp; sourceTree = "<group>"; };
+		FCCA1F132739488200D5CFCA /* FilterNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilterNode.cpp; sourceTree = "<group>"; };
+		FCCA1F142739488200D5CFCA /* MixFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MixFilter.cpp; sourceTree = "<group>"; };
+		FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SharpenFilter.cpp; sourceTree = "<group>"; };
+		FCCA1F2E27394C6600D5CFCA /* FileUtilsForIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtilsForIOS.h; sourceTree = "<group>"; };
+		FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileUtilsForIOS.mm; sourceTree = "<group>"; };
+		FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseGLUtils.cpp; sourceTree = "<group>"; };
+		FCCA1F3427394C9D00D5CFCA /* BaseGLUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseGLUtils.hpp; sourceTree = "<group>"; };
+		FCCA1F3727394DAF00D5CFCA /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +124,10 @@
 		FCCA1EB1273945CE00D5CFCA = {
 			isa = PBXGroup;
 			children = (
+				FCCA1EC82739472D00D5CFCA /* Define */,
+				FCCA1ECF2739479700D5CFCA /* OpenGLBase */,
+				FCCA1EEC2739488200D5CFCA /* Filters */,
+				FCCA1F3727394DAF00D5CFCA /* Resources */,
 				FCCA1EBC273945CE00D5CFCA /* ImageEffect */,
 				FCCA1EBB273945CE00D5CFCA /* Products */,
 			);
@@ -64,6 +148,121 @@
 				FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */,
 			);
 			path = ImageEffect;
+			sourceTree = "<group>";
+		};
+		FCCA1EC82739472D00D5CFCA /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1EC92739473D00D5CFCA /* BaseDefine.h */,
+				FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */,
+				FCCA1ECA2739473D00D5CFCA /* BaseLog.h */,
+				FCCA1ECB2739473D00D5CFCA /* BasePlatform.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		FCCA1ECF2739479700D5CFCA /* OpenGLBase */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F3227394C7000D5CFCA /* Utils */,
+				FCCA1F2C27394C1800D5CFCA /* Platform */,
+				FCCA1EDF273947EE00D5CFCA /* FrameBuffer.cpp */,
+				FCCA1EE1273947EE00D5CFCA /* FrameBuffer.hpp */,
+				FCCA1EE4273947EF00D5CFCA /* FrameBufferPool.cpp */,
+				FCCA1EDE273947EE00D5CFCA /* FrameBufferPool.hpp */,
+				FCCA1EE0273947EE00D5CFCA /* Program.cpp */,
+				FCCA1EE5273947EF00D5CFCA /* Program.hpp */,
+				FCCA1EE2273947EE00D5CFCA /* ProgramPool.cpp */,
+				FCCA1EE3273947EE00D5CFCA /* ProgramPool.hpp */,
+			);
+			path = OpenGLBase;
+			sourceTree = "<group>";
+		};
+		FCCA1EEC2739488200D5CFCA /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F082739488200D5CFCA /* base */,
+				FCCA1F052739488200D5CFCA /* factory */,
+				FCCA1F012739488200D5CFCA /* CopyFilter.hpp */,
+				FCCA1EEE2739488200D5CFCA /* CopyFilter.cpp */,
+				FCCA1EFC2739488200D5CFCA /* LutFilter.hpp */,
+				FCCA1EF62739488200D5CFCA /* LutFilter.cpp */,
+				FCCA1EF32739488200D5CFCA /* MixFilter.hpp */,
+				FCCA1F142739488200D5CFCA /* MixFilter.cpp */,
+				FCCA1EF22739488200D5CFCA /* SharpenFilter.hpp */,
+				FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */,
+				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
+				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
+				FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */,
+				FCCA1EEF2739488200D5CFCA /* BlurSubFilter.cpp */,
+				FCCA1F002739488200D5CFCA /* SmoothFilter.hpp */,
+				FCCA1EED2739488200D5CFCA /* SmoothFilter.cpp */,
+				FCCA1EFD2739488200D5CFCA /* PointFilter.hpp */,
+				FCCA1EF72739488200D5CFCA /* PointFilter.cpp */,
+				FCCA1EF82739488200D5CFCA /* BackgroundPointFilter.hpp */,
+				FCCA1EFE2739488200D5CFCA /* BackgroundPointFilter.cpp */,
+				FCCA1EFF2739488200D5CFCA /* LineFilter.hpp */,
+				FCCA1EF92739488200D5CFCA /* LineFilter.cpp */,
+				FCCA1F042739488200D5CFCA /* BackgroundLineFilter.hpp */,
+				FCCA1EF12739488200D5CFCA /* BackgroundLineFilter.cpp */,
+				FCCA1EF52739488200D5CFCA /* MeshFilter.hpp */,
+				FCCA1EFB2739488200D5CFCA /* MeshFilter.cpp */,
+				FCCA1EF02739488200D5CFCA /* BackgroundMeshFilter.hpp */,
+				FCCA1F032739488200D5CFCA /* BackgroundMeshFilter.cpp */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		FCCA1F052739488200D5CFCA /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F062739488200D5CFCA /* FilterFactory.hpp */,
+				FCCA1F072739488200D5CFCA /* FilterFactory.cpp */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		FCCA1F082739488200D5CFCA /* base */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F0E2739488200D5CFCA /* FilterConstant.hpp */,
+				FCCA1F0C2739488200D5CFCA /* BaseFilter.hpp */,
+				FCCA1F102739488200D5CFCA /* BaseFilter.cpp */,
+				FCCA1F0F2739488200D5CFCA /* FilterDescription.hpp */,
+				FCCA1F092739488200D5CFCA /* FilterNodeDescription.hpp */,
+				FCCA1F122739488200D5CFCA /* FilterNodeDescription.cpp */,
+				FCCA1F0A2739488200D5CFCA /* FilterNode.hpp */,
+				FCCA1F132739488200D5CFCA /* FilterNode.cpp */,
+				FCCA1F0D2739488200D5CFCA /* FilterChain.cpp */,
+				FCCA1F112739488200D5CFCA /* FilterChain.hpp */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		FCCA1F2C27394C1800D5CFCA /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F2D27394C1F00D5CFCA /* iOS */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		FCCA1F2D27394C1F00D5CFCA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F2E27394C6600D5CFCA /* FileUtilsForIOS.h */,
+				FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		FCCA1F3227394C7000D5CFCA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */,
+				FCCA1F3427394C9D00D5CFCA /* BaseGLUtils.hpp */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +321,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */,
+				FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */,
+				FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */,
+				FCCA1EE7273947EF00D5CFCA /* Program.cpp in Sources */,
+				FCCA1F1D2739488200D5CFCA /* LineFilter.cpp in Sources */,
+				FCCA1F3527394C9D00D5CFCA /* BaseGLUtils.cpp in Sources */,
+				FCCA1F1C2739488200D5CFCA /* PointFilter.cpp in Sources */,
+				FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */,
+				FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */,
 				FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */,
+				FCCA1F202739488200D5CFCA /* BackgroundMeshFilter.cpp in Sources */,
+				FCCA1F1B2739488200D5CFCA /* LutFilter.cpp in Sources */,
+				FCCA1F272739488200D5CFCA /* MixFilter.cpp in Sources */,
+				FCCA1F232739488200D5CFCA /* FilterChain.cpp in Sources */,
+				FCCA1F262739488200D5CFCA /* FilterNode.cpp in Sources */,
+				FCCA1F162739488200D5CFCA /* SmoothFilter.cpp in Sources */,
+				FCCA1F282739488200D5CFCA /* SharpenFilter.cpp in Sources */,
+				FCCA1F212739488200D5CFCA /* FilterFactory.cpp in Sources */,
+				FCCA1EE6273947EF00D5CFCA /* FrameBuffer.cpp in Sources */,
+				FCCA1F1F2739488200D5CFCA /* BackgroundPointFilter.cpp in Sources */,
+				FCCA1EE9273947EF00D5CFCA /* FrameBufferPool.cpp in Sources */,
+				FCCA1F252739488200D5CFCA /* FilterNodeDescription.cpp in Sources */,
+				FCCA1F1A2739488200D5CFCA /* BlurFilter.cpp in Sources */,
+				FCCA1F1E2739488200D5CFCA /* MeshFilter.cpp in Sources */,
+				FCCA1EE8273947EF00D5CFCA /* ProgramPool.cpp in Sources */,
+				FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

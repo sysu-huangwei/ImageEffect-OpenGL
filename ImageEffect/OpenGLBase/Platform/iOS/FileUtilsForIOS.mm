@@ -10,7 +10,7 @@
 #import "BaseDefine.h"
 
 const char *getResourcePathForIOS() {
-    return [NSBundle.mainBundle.bundlePath stringByAppendingPathComponent:@"Resources"].UTF8String;
+    return [NSBundle.mainBundle.bundlePath stringByAppendingPathComponent:@"ImageEffect.bundle"].UTF8String;
 }
 
 //Alpha为原始图像的透明度

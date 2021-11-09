@@ -107,7 +107,6 @@
 		FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileUtilsForIOS.mm; sourceTree = "<group>"; };
 		FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseGLUtils.cpp; sourceTree = "<group>"; };
 		FCCA1F3427394C9D00D5CFCA /* BaseGLUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseGLUtils.hpp; sourceTree = "<group>"; };
-		FCCA1F3727394DAF00D5CFCA /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +126,6 @@
 				FCCA1EC82739472D00D5CFCA /* Define */,
 				FCCA1ECF2739479700D5CFCA /* OpenGLBase */,
 				FCCA1EEC2739488200D5CFCA /* Filters */,
-				FCCA1F3727394DAF00D5CFCA /* Resources */,
 				FCCA1EBC273945CE00D5CFCA /* ImageEffect */,
 				FCCA1EBB273945CE00D5CFCA /* Products */,
 			);

@@ -8,6 +8,7 @@
 #define FilterConstant_hpp
 
 #define FilterType_Copy "CopyFilter"
+#define FilterType_Brightness "BrightnessFilter"
 #define FilterType_Lut "LutFilter"
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"

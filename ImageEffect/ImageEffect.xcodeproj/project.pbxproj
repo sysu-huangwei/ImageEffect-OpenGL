@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */; };
 		FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */; };
 		FCCA1EC0273945CE00D5CFCA /* ImageEffect.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */; };
 		FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */; };
@@ -50,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrightnessFilter.cpp; sourceTree = "<group>"; };
+		FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrightnessFilter.hpp; sourceTree = "<group>"; };
 		FCCA1EBA273945CE00D5CFCA /* libImageEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageEffect.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageEffect.h; sourceTree = "<group>"; };
 		FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffect.m; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				FCCA1F052739488200D5CFCA /* factory */,
 				FCCA1F012739488200D5CFCA /* CopyFilter.hpp */,
 				FCCA1EEE2739488200D5CFCA /* CopyFilter.cpp */,
+				FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */,
+				FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */,
 				FCCA1EFC2739488200D5CFCA /* LutFilter.hpp */,
 				FCCA1EF62739488200D5CFCA /* LutFilter.cpp */,
 				FCCA1EF32739488200D5CFCA /* MixFilter.hpp */,
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */,
 				FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */,
 				FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */,
 				FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */,

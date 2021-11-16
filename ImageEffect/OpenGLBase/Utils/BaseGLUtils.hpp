@@ -30,6 +30,8 @@ public:
     
     static std::string getFragmengShaderSourceByName(std::string shaderName);
     
+    static std::string getFilterDescriptionByName(std::string descriptionName);
+    
     static unsigned char *loadImageFileToRGBAPixels(const char *filePath, int &outWidth, int &outHeight);
        
     static GLuint loadImageFileToTexture(const char *filePath, int &outWidth, int &outHeight);

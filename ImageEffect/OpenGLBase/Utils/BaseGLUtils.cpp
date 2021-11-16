@@ -27,6 +27,20 @@ std::string BaseGLUtils::getFragmengShaderSourceByName(std::string shaderName) {
     return getShaderSourceByName(shaderName, GL_FRAGMENT_SHADER);
 }
 
+std::string BaseGLUtils::getFilterDescriptionByName(std::string descriptionName) {
+    std::string filePath = getResourcePath() + "/descriptions/" + descriptionName + ".json";
+    unsigned long dataSize;
+    const char *memoryData = loadFileToMemory(filePath.c_str(), dataSize);
+    if (memoryData == NULL || dataSize == 0) {
+        LOGE("Error: getFilterDescriptionByName: loadFileToMemory failed: filePath = %s", filePath.c_str());
+        return "";
+    } else {
+        std::string description = std::string(memoryData);
+        SAFE_DELETE_ARRAY(memoryData);
+        return description;
+    }
+}
+
 unsigned char *BaseGLUtils::loadImageFileToRGBAPixels(const char *filePath, int &outWidth, int &outHeight) {
     outWidth = 0;
     outHeight = 0;

@@ -1,0 +1,27 @@
+[
+    {
+        "id": "begin",
+        "nextIDs": ["blurH"],
+        "nextTextureIndices": [0]
+    },
+    {
+        "id": "blurH",
+        "nextIDs": ["blurV"],
+        "nextTextureIndices": [0],
+        "filterDesc": {
+            "type": "BlurSubFilter",
+            "params": {
+                "BlurSubFilter_Direction": "0"
+            }
+        }
+    },
+    {
+        "id": "blurV",
+        "filterDesc": {
+            "type": "BlurSubFilter",
+            "params": {
+                "BlurSubFilter_Direction": "1"
+            }
+        }
+    }
+]

@@ -26,7 +26,8 @@ void BaseFilter::setOutputSize(int outputWidth, int outputHeight) {
 }
 
 void BaseFilter::release() {
-    
+    inputFrameBuffers.clear();
+    inputFrameBufferIndices.clear();
 }
 
 void BaseFilter::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {

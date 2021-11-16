@@ -63,6 +63,10 @@ void FilterChain::release() {
     for (size_t i = 0; i < allNodes.size(); i++) {
         allNodes[i]->filter->release();
     }
+    beginVirtualNode = nullptr;
+    lastNodes.clear();
+    allNodes.clear();
+    BaseFilter::release();
 }
 
 void FilterChain::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {

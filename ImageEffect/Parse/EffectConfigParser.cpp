@@ -51,14 +51,14 @@ std::vector<FilterNodeDescription> EffectConfigParser::parseJsonToDescription(st
                 }
                 
                 cJSON *filterDesc = cJSON_GetObjectItem(node, "filterDesc");
-                if (filterDesc->type == cJSON_Object) {
+                if (filterDesc && filterDesc->type == cJSON_Object) {
                     
-                    cJSON *type = cJSON_GetObjectItem(node, "type");
+                    cJSON *type = cJSON_GetObjectItem(filterDesc, "type");
                     if (type && type->type == cJSON_String) {
                         desc.filterDesc.type = std::string(type->valuestring);
                     }
                     
-                    cJSON *outputWidth = cJSON_GetObjectItem(node, "outputWidth");
+                    cJSON *outputWidth = cJSON_GetObjectItem(filterDesc, "outputWidth");
                     if (outputWidth && outputWidth->type == cJSON_Number) {
                         desc.filterDesc.outputWidth = outputWidth->valueint;
                     }
@@ -68,12 +68,12 @@ std::vector<FilterNodeDescription> EffectConfigParser::parseJsonToDescription(st
                         desc.filterDesc.outputHeight = outputHeight->valueint;
                     }
                     
-                    cJSON *enable = cJSON_GetObjectItem(node, "enable");
+                    cJSON *enable = cJSON_GetObjectItem(filterDesc, "enable");
                     if (enable) {
                         desc.filterDesc.enable = enable->type == cJSON_True;
                     }
                     
-                    cJSON *params = cJSON_GetObjectItem(node, "params");
+                    cJSON *params = cJSON_GetObjectItem(filterDesc, "params");
                     if (params && params->type == cJSON_Object) {
                         cJSON *currentParams = params->child;
                         if (currentParams) {
@@ -82,6 +82,8 @@ std::vector<FilterNodeDescription> EffectConfigParser::parseJsonToDescription(st
                         }
                     }
                 }
+                
+                descriptions.push_back(desc);
             }
         }
     }

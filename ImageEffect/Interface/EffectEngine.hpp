@@ -15,7 +15,7 @@ namespace effect {
 class EffectEngine : public FilterChain {
 public:
     
-    EffectEngine(std::vector<FilterNodeDescription> nodeDescriptions);
+    EffectEngine(std::string configFilePath);
     
     /// 滤镜的类型
     std::string filterType() override { return "EffectEngine"; }

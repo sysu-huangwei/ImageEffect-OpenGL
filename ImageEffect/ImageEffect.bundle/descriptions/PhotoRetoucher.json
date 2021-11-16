@@ -1,0 +1,13 @@
+[
+    {
+        "id": "begin",
+        "nextIDs": ["Brightness"],
+        "nextTextureIndices": [0]
+    },
+    {
+        "id": "Brightness",
+        "filterDesc": {
+            "type": "BrightnessFilter"
+        }
+    }
+]

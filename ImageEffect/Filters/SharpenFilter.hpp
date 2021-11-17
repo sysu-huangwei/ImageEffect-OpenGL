@@ -20,11 +20,11 @@ public:
     
     /// 初始化，必须在GL线程，子类实现这个方法去做GL相关的初始化操作
     virtual void init() override;
-    
-    /// 设置绘制尺寸
-    /// @param outputWidth 宽
-    /// @param outputHeight 高
-    virtual void setOutputSize(int outputWidth, int outputHeight) override;
+
+    /// 设置输入图像的FBO
+    /// @param inputFrameBuffer 输入图像的FBO
+    /// @param index 这个输入的FBO纹理应该设置到当前滤镜shader的第几个位置，从0开始（通常用于多路输入的滤镜）
+    virtual void setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index = 0);
     
     /// 渲染，必须在GL线程
     /// @param outputFrameBuffer 目标FBO

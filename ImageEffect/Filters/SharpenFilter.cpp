@@ -12,10 +12,12 @@ void SharpenFilter::init() {
     BaseFilter::initWithVertexStringAndFragmentString("sharpen_USM", "sharpen_USM");
 }
 
-void SharpenFilter::setOutputSize(int outputWidth, int outputHeight) {
-    BaseFilter::setOutputSize(outputWidth, outputHeight);
-    widthOffset = 1.0f / (float)outputWidth;
-    heightOffset = 1.0f / (float)outputHeight;
+void SharpenFilter::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {
+    BaseFilter::setInputFrameBufferAtIndex(inputFrameBuffer, index);
+    if (inputFrameBuffer) {
+        widthOffset = 1.0f / inputFrameBuffer->getWidth();
+        heightOffset = 1.0f / inputFrameBuffer->getHeight();
+    }
 }
 
 void SharpenFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {

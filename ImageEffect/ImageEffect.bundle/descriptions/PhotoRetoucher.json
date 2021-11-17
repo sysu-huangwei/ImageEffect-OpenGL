@@ -1,13 +1,19 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["Brightness"],
-        "nextTextureIndices": [0]
+        "nextIDs": ["brightness"]
     },
     {
-        "id": "Brightness",
+        "id": "brightness",
+        "nextIDs": ["sharpen"],
         "filterDesc": {
             "type": "BrightnessFilter"
+        }
+    },
+    {
+        "id": "sharpen",
+        "filterDesc": {
+            "type": "SharpenUSMFilter"
         }
     }
 ]

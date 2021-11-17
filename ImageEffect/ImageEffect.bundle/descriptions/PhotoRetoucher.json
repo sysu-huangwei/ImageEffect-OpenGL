@@ -5,9 +5,16 @@
     },
     {
         "id": "brightness",
-        "nextIDs": ["sharpen"],
+        "nextIDs": ["contrast"],
         "filterDesc": {
             "type": "BrightnessFilter"
+        }
+    },
+    {
+        "id": "contrast",
+        "nextIDs": ["sharpen"],
+        "filterDesc": {
+            "type": "ContrastFilter"
         }
     },
     {

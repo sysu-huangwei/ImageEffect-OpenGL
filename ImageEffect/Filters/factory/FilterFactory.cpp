@@ -10,6 +10,7 @@
 
 #include "CopyFilter.hpp"
 #include "BrightnessFilter.hpp"
+#include "ContrastFilter.hpp"
 #include "SharpenFilter.hpp"
 #include "BlurSubFilter.hpp"
 #include "BlurFilter.hpp"
@@ -31,6 +32,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<CopyFilter>();
     } else if (filterDesc.type == FilterType_Brightness) {
         filter = std::make_shared<BrightnessFilter>();
+    } else if (filterDesc.type == FilterType_Contrast) {
+        filter = std::make_shared<ContrastFilter>();
     } else if (filterDesc.type == FilterType_SharpenUSM) {
         filter = std::make_shared<SharpenFilter>();
     } else if (filterDesc.type == FilterType_BlurSub) {

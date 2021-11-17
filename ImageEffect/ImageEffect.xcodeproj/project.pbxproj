@@ -11,6 +11,7 @@
 		FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */; };
 		FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7AE273B6B4D003F6696 /* cJSON.c */; };
 		FC29E7B4273B6B80003F6696 /* EffectConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7B2273B6B80003F6696 /* EffectConfigParser.cpp */; };
+		FC29F6F5274522B7003F6696 /* ContrastFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29F6F3274522B7003F6696 /* ContrastFilter.cpp */; };
 		FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */; };
 		FCCA1EC0273945CE00D5CFCA /* ImageEffect.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */; };
 		FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */; };
@@ -62,6 +63,8 @@
 		FC29E7AF273B6B4D003F6696 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
 		FC29E7B2273B6B80003F6696 /* EffectConfigParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectConfigParser.cpp; sourceTree = "<group>"; };
 		FC29E7B3273B6B80003F6696 /* EffectConfigParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EffectConfigParser.hpp; sourceTree = "<group>"; };
+		FC29F6F3274522B7003F6696 /* ContrastFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContrastFilter.cpp; sourceTree = "<group>"; };
+		FC29F6F4274522B7003F6696 /* ContrastFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ContrastFilter.hpp; sourceTree = "<group>"; };
 		FCCA1EBA273945CE00D5CFCA /* libImageEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageEffect.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageEffect.h; sourceTree = "<group>"; };
 		FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffect.m; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				FCCA1EEE2739488200D5CFCA /* CopyFilter.cpp */,
 				FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */,
 				FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */,
+				FC29F6F4274522B7003F6696 /* ContrastFilter.hpp */,
+				FC29F6F3274522B7003F6696 /* ContrastFilter.cpp */,
 				FCCA1EFC2739488200D5CFCA /* LutFilter.hpp */,
 				FCCA1EF62739488200D5CFCA /* LutFilter.cpp */,
 				FCCA1EF32739488200D5CFCA /* MixFilter.hpp */,
@@ -362,6 +367,7 @@
 				FCCA1EE7273947EF00D5CFCA /* Program.cpp in Sources */,
 				FCCA1F1D2739488200D5CFCA /* LineFilter.cpp in Sources */,
 				FCCA1F3527394C9D00D5CFCA /* BaseGLUtils.cpp in Sources */,
+				FC29F6F5274522B7003F6696 /* ContrastFilter.cpp in Sources */,
 				FCCA1F1C2739488200D5CFCA /* PointFilter.cpp in Sources */,
 				FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */,
 				FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */,

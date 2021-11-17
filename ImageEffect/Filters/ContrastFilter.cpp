@@ -1,18 +1,18 @@
 //
-//  BrightnessFilter.cpp
+//  ContrastFilter.cpp
 //
-//  Created by rayyy on 2021/11/9.
+//  Created by rayyy on 2021/11/17.
 //
 
-#include "BrightnessFilter.hpp"
+#include "ContrastFilter.hpp"
 
 namespace effect {
 
-void BrightnessFilter::init() {
-    BaseFilter::initWithVertexStringAndFragmentString("simple", "brightness");
+void ContrastFilter::init() {
+    BaseFilter::initWithVertexStringAndFragmentString("simple", "contrast");
 }
 
-void BrightnessFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
+void ContrastFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
     if (isNeedRender() && outputFrameBuffer) {
         outputFrameBuffer->activeFrameBuffer();
         
@@ -26,7 +26,7 @@ void BrightnessFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFr
         
         program->setTextureAtIndex("u_texture", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
         
-        program->setUniform1f("brightness", alpha);
+        program->setUniform1f("contrast", alpha);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         
@@ -36,13 +36,13 @@ void BrightnessFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFr
     unlockAndClearAllInputFrameBuffers();
 }
 
-void BrightnessFilter::setParams(const std::map<std::string, std::string> &param) {
-    if (param.find(FilterParam_Brightness_Alpha) != param.end()) {
-        setAlpha(std::stof(param.at(FilterParam_Brightness_Alpha)));
+void ContrastFilter::setParams(const std::map<std::string, std::string> &param) {
+    if (param.find(FilterParam_Contrast_Alpha) != param.end()) {
+        setAlpha(std::stof(param.at(FilterParam_Contrast_Alpha)));
     }
 }
 
-void BrightnessFilter::setAlpha(float alpha) {
+void ContrastFilter::setAlpha(float alpha) {
     this->alpha = alpha * maxBrightnessMultiplier;
 }
 

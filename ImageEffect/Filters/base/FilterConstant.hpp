@@ -9,6 +9,7 @@
 
 #define FilterType_Copy "CopyFilter"
 #define FilterType_Brightness "BrightnessFilter"
+#define FilterType_Contrast "ContrastFilter"
 #define FilterType_Lut "LutFilter"
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"
@@ -26,6 +27,7 @@
 #define FilterType_SmallHead "SmallHeadFilter"
 
 #define FilterParam_Brightness_Alpha FilterType_Brightness "_Alpha"
+#define FilterParam_Contrast_Alpha FilterType_Contrast "_Alpha"
 #define FilterParam_Lut_Path FilterType_Lut "_Path"
 #define FilterParam_Lut_Alpha FilterType_Lut "_Alpha"
 #define FilterParam_Mix_Alpha FilterType_Mix "_Alpha"

@@ -12,9 +12,16 @@
     },
     {
         "id": "contrast",
-        "nextIDs": ["sharpen"],
+        "nextIDs": ["saturation"],
         "filterDesc": {
             "type": "ContrastFilter"
+        }
+    },
+    {
+        "id": "saturation",
+        "nextIDs": ["sharpen"],
+        "filterDesc": {
+            "type": "SaturationFilter"
         }
     },
     {

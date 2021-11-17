@@ -1,18 +1,19 @@
 //
-//  ContrastFilter.hpp
+//  SaturationFilter.hpp
+//  ImageEffect
 //
 //  Created by rayyy on 2021/11/17.
 //
 
-#ifndef ContrastFilter_hpp
-#define ContrastFilter_hpp
+#ifndef SaturationFilter_hpp
+#define SaturationFilter_hpp
 
 #include "BaseFilter.hpp"
 
 namespace effect {
 
-/// 对比度
-class ContrastFilter : public BaseFilter {
+/// 饱和度
+class SaturationFilter : public BaseFilter {
 public:
     
     /// 滤镜的类型
@@ -29,8 +30,8 @@ public:
     /// @param param 参数
     virtual void setParams(const std::map<std::string, std::string> &param) override;
     
-    /// 设置对比度，-1.0 ~ 1.0
-    /// @param alpha 对比度，-1.0 ~ 1.0
+    /// 设置饱和度，-1.0 ~ 1.0
+    /// @param alpha 饱和度，-1.0 ~ 1.0
     void setAlpha(float alpha);
 
 private:
@@ -40,4 +41,4 @@ private:
 
 }
 
-#endif /* ContrastFilter_hpp */
+#endif /* SaturationFilter_hpp */

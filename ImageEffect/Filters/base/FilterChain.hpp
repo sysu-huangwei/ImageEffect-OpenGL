@@ -33,6 +33,10 @@ public:
     /// @param outputFrameBuffer 目标FBO
     virtual void renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) override;
     
+    /// 设置参数
+    /// @param param 参数
+    void setParams(const std::map<std::string, std::string> &param) override;
+    
 protected:
     
     // 滤镜链描述

@@ -25,6 +25,10 @@ public:
     /// @param outputFrameBuffer 目标FBO
     virtual void renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) override;
     
+    /// 设置参数
+    /// @param param 参数
+    virtual void setParams(const std::map<std::string, std::string> &param) override;
+    
     /// 设置亮度，-1.0 ~ 1.0
     /// @param alpha 亮度，-1.0 ~ 1.0
     void setAlpha(float alpha);

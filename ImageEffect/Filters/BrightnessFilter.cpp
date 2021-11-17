@@ -37,6 +37,12 @@ void BrightnessFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFr
     unlockAndClearAllInputFrameBuffers();
 }
 
+void BrightnessFilter::setParams(const std::map<std::string, std::string> &param) {
+    if (param.find(FilterParam_Brightness_Alpha) != param.end()) {
+        setAlpha(std::stof(param.at(FilterParam_Brightness_Alpha)));
+    }
+}
+
 void BrightnessFilter::setAlpha(float alpha) {
     this->alpha = alpha * maxBrightnessMultiplier;
 }

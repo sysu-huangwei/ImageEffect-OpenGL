@@ -25,6 +25,7 @@
 #define FilterType_BackgroundMesh "BackgroundMeshFilter"
 #define FilterType_SmallHead "SmallHeadFilter"
 
+#define FilterParam_Brightness_Alpha FilterType_Brightness "_Alpha"
 #define FilterParam_Lut_Path FilterType_Lut "_Path"
 #define FilterParam_Lut_Alpha FilterType_Lut "_Alpha"
 #define FilterParam_Mix_Alpha FilterType_Mix "_Alpha"

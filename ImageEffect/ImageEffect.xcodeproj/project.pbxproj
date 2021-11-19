@@ -13,6 +13,7 @@
 		FC29E7B4273B6B80003F6696 /* EffectConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7B2273B6B80003F6696 /* EffectConfigParser.cpp */; };
 		FC29F6F5274522B7003F6696 /* ContrastFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29F6F3274522B7003F6696 /* ContrastFilter.cpp */; };
 		FC29F72427453318003F6696 /* SaturationFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29F72227453318003F6696 /* SaturationFilter.cpp */; };
+		FC29F92227474D95003F6696 /* LevelFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29F92027474D95003F6696 /* LevelFilter.cpp */; };
 		FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */; };
 		FCCA1EC0273945CE00D5CFCA /* ImageEffect.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */; };
 		FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1ECC2739473D00D5CFCA /* BaseLog.cpp */; };
@@ -68,6 +69,8 @@
 		FC29F6F4274522B7003F6696 /* ContrastFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ContrastFilter.hpp; sourceTree = "<group>"; };
 		FC29F72227453318003F6696 /* SaturationFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SaturationFilter.cpp; sourceTree = "<group>"; };
 		FC29F72327453318003F6696 /* SaturationFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SaturationFilter.hpp; sourceTree = "<group>"; };
+		FC29F92027474D95003F6696 /* LevelFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelFilter.cpp; sourceTree = "<group>"; };
+		FC29F92127474D95003F6696 /* LevelFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelFilter.hpp; sourceTree = "<group>"; };
 		FCCA1EBA273945CE00D5CFCA /* libImageEffect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageEffect.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCA1EBD273945CE00D5CFCA /* ImageEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageEffect.h; sourceTree = "<group>"; };
 		FCCA1EBE273945CE00D5CFCA /* ImageEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageEffect.m; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				FC29F6F3274522B7003F6696 /* ContrastFilter.cpp */,
 				FC29F72327453318003F6696 /* SaturationFilter.hpp */,
 				FC29F72227453318003F6696 /* SaturationFilter.cpp */,
+				FC29F92127474D95003F6696 /* LevelFilter.hpp */,
+				FC29F92027474D95003F6696 /* LevelFilter.cpp */,
 				FCCA1EFC2739488200D5CFCA /* LutFilter.hpp */,
 				FCCA1EF62739488200D5CFCA /* LutFilter.cpp */,
 				FCCA1EF32739488200D5CFCA /* MixFilter.hpp */,
@@ -376,6 +381,7 @@
 				FCCA1F1C2739488200D5CFCA /* PointFilter.cpp in Sources */,
 				FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */,
 				FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */,
+				FC29F92227474D95003F6696 /* LevelFilter.cpp in Sources */,
 				FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */,
 				FC29E7B4273B6B80003F6696 /* EffectConfigParser.cpp in Sources */,
 				FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */,

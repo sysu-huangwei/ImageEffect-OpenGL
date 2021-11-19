@@ -1,6 +1,5 @@
 //
 //  SaturationFilter.hpp
-//  ImageEffect
 //
 //  Created by rayyy on 2021/11/17.
 //

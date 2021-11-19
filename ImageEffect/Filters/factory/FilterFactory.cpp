@@ -12,6 +12,7 @@
 #include "BrightnessFilter.hpp"
 #include "ContrastFilter.hpp"
 #include "SaturationFilter.hpp"
+#include "LevelFilter.hpp"
 #include "SharpenFilter.hpp"
 #include "BlurSubFilter.hpp"
 #include "BlurFilter.hpp"
@@ -37,6 +38,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<ContrastFilter>();
     } else if (filterDesc.type == FilterType_Saturation) {
         filter = std::make_shared<SaturationFilter>();
+    } else if (filterDesc.type == FilterType_Level) {
+        filter = std::make_shared<LevelFilter>();
     } else if (filterDesc.type == FilterType_SharpenUSM) {
         filter = std::make_shared<SharpenFilter>();
     } else if (filterDesc.type == FilterType_BlurSub) {

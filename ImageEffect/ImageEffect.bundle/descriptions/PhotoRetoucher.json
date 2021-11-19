@@ -19,9 +19,20 @@
     },
     {
         "id": "saturation",
-        "nextIDs": ["sharpen"],
+        "nextIDs": ["level"],
         "filterDesc": {
             "type": "SaturationFilter"
+        }
+    },
+    {
+        "id": "level",
+        "nextIDs": ["sharpen"],
+        "filterDesc": {
+            "type": "LevelFilter",
+            "params" : {
+                "LevelFilter_HighLight" : "0.9",
+                "LevelFilter_Shadow" : "0.1"
+            }
         }
     },
     {

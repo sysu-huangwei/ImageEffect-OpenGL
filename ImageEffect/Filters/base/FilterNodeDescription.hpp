@@ -13,7 +13,7 @@
 namespace effect {
 
 /// 滤镜节点的描述
-typedef struct {
+typedef struct FilterNodeDescription {
     
     // 当前节点的ID
     std::string id = "";

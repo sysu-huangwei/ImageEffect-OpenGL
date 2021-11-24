@@ -13,7 +13,7 @@
 namespace effect {
 
 /// 一个渲染滤镜的描述
-typedef struct {
+typedef struct FilterDescription {
 
     // 当前滤镜的类型
     std::string type = "";

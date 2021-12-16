@@ -38,4 +38,19 @@ typedef struct {
     float height;
 } BaseRect;
 
+typedef struct {
+    float maxR;
+    float maxG;
+    float maxB;
+    float maxBrightness;
+    float minR;
+    float minG;
+    float minB;
+    float minBrightness;
+    float averageR;
+    float averageG;
+    float averageB;
+    float averageBrightness;
+} BaseFrameColorInfo;
+
 #endif //BASEDEFINE_H

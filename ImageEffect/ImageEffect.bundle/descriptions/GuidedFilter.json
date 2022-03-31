@@ -1,0 +1,16 @@
+[
+    {
+        "id": "begin",
+        "nextIDs": ["mean"],
+        "nextTextureIndices": [0]
+    },
+    {
+        "id": "mean",
+        "filterDesc": {
+            "type": "MeanFilter",
+            "params": {
+                "MeanFilter_Alpha": "1.0"
+            }
+        }
+    }
+]

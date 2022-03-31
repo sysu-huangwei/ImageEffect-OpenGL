@@ -13,6 +13,7 @@
 #define FilterType_Level "LevelFilter"
 #define FilterType_Saturation "SaturationFilter"
 #define FilterType_Lut "LutFilter"
+#define FilterType_Mean "MeanFilter"
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"
 #define FilterType_Mix "MixFilter"
@@ -39,6 +40,7 @@
 #define FilterParam_Mix_Alpha FilterType_Mix "_Alpha"
 #define FilterParam_BlurSub_Direction FilterType_BlurSub "_Direction"
 #define FilterParam_Blur_Alpha FilterType_Blur "_Alpha"
+#define FilterParam_Mean_Alpha FilterType_Mean "_Alpha"
 #define FilterParam_Sharpen_Alpha FilterType_SharpenUSM "_SharpenAlpha"
 #define FilterParam_SmallHead_Degree FilterType_SmallHead "_SmallHeadDegree"
 

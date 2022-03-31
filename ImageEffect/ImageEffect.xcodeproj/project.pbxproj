@@ -41,6 +41,7 @@
 		FCCA1F282739488200D5CFCA /* SharpenFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */; };
 		FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */; };
 		FCCA1F3527394C9D00D5CFCA /* BaseGLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */; };
+		FCFCDAC427F5A1A100A1092D /* MeanFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,6 +129,8 @@
 		FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileUtilsForIOS.mm; sourceTree = "<group>"; };
 		FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseGLUtils.cpp; sourceTree = "<group>"; };
 		FCCA1F3427394C9D00D5CFCA /* BaseGLUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseGLUtils.hpp; sourceTree = "<group>"; };
+		FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MeanFilter.cpp; sourceTree = "<group>"; };
+		FCFCDAC327F5A1A100A1092D /* MeanFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MeanFilter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +243,8 @@
 				FCCA1F142739488200D5CFCA /* MixFilter.cpp */,
 				FCCA1EF22739488200D5CFCA /* SharpenFilter.hpp */,
 				FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */,
+				FCFCDAC327F5A1A100A1092D /* MeanFilter.hpp */,
+				FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */,
 				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
 				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
 				FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */,
@@ -380,6 +385,7 @@
 				FC29F6F5274522B7003F6696 /* ContrastFilter.cpp in Sources */,
 				FCCA1F1C2739488200D5CFCA /* PointFilter.cpp in Sources */,
 				FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */,
+				FCFCDAC427F5A1A100A1092D /* MeanFilter.cpp in Sources */,
 				FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */,
 				FC29F92227474D95003F6696 /* LevelFilter.cpp in Sources */,
 				FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */,

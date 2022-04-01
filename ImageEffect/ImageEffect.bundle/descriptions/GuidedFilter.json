@@ -1,16 +1,24 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["mean"],
-        "nextTextureIndices": [0]
+        "nextIDs": ["mean", "multiply"],
+        "nextTextureIndices": [0, 1]
     },
     {
         "id": "mean",
+        "nextIDs": ["multiply"],
+        "nextTextureIndices": [0],
         "filterDesc": {
             "type": "MeanFilter",
             "params": {
                 "MeanFilter_Alpha": "1.0"
             }
+        }
+    },
+    {
+        "id": "multiply",
+        "filterDesc": {
+            "type": "MultiplyFilter"
         }
     }
 ]

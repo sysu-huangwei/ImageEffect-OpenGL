@@ -14,6 +14,7 @@
 #define FilterType_Saturation "SaturationFilter"
 #define FilterType_Lut "LutFilter"
 #define FilterType_Mean "MeanFilter"
+#define FilterType_Multiply "MultiplyFilter"
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"
 #define FilterType_Mix "MixFilter"

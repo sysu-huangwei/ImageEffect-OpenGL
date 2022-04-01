@@ -14,6 +14,7 @@
 #include "SaturationFilter.hpp"
 #include "LevelFilter.hpp"
 #include "SharpenFilter.hpp"
+#include "MultiplyFilter.hpp"
 #include "MeanFilter.hpp"
 #include "BlurSubFilter.hpp"
 #include "BlurFilter.hpp"
@@ -43,6 +44,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<LevelFilter>();
     } else if (filterDesc.type == FilterType_SharpenUSM) {
         filter = std::make_shared<SharpenFilter>();
+    } else if (filterDesc.type == FilterType_Multiply) {
+        filter = std::make_shared<MultiplyFilter>();
     } else if (filterDesc.type == FilterType_Mean) {
         filter = std::make_shared<MeanFilter>();
     } else if (filterDesc.type == FilterType_BlurSub) {

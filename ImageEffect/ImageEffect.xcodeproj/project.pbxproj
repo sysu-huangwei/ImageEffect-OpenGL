@@ -43,6 +43,7 @@
 		FCCA1F3527394C9D00D5CFCA /* BaseGLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA1F3327394C9D00D5CFCA /* BaseGLUtils.cpp */; };
 		FCFCDAC427F5A1A100A1092D /* MeanFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */; };
 		FCFCDAC727F6B6E600A1092D /* MultiplyFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */; };
+		FCFCDACA27F6EACC00A1092D /* AddFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,6 +135,8 @@
 		FCFCDAC327F5A1A100A1092D /* MeanFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MeanFilter.hpp; sourceTree = "<group>"; };
 		FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MultiplyFilter.cpp; sourceTree = "<group>"; };
 		FCFCDAC627F6B6E600A1092D /* MultiplyFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MultiplyFilter.hpp; sourceTree = "<group>"; };
+		FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AddFilter.cpp; sourceTree = "<group>"; };
+		FCFCDAC927F6EACC00A1092D /* AddFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AddFilter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +251,8 @@
 				FCCA1F152739488200D5CFCA /* SharpenFilter.cpp */,
 				FCFCDAC327F5A1A100A1092D /* MeanFilter.hpp */,
 				FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */,
+				FCFCDAC927F6EACC00A1092D /* AddFilter.hpp */,
+				FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */,
 				FCFCDAC627F6B6E600A1092D /* MultiplyFilter.hpp */,
 				FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */,
 				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */,
+				FCFCDACA27F6EACC00A1092D /* AddFilter.cpp in Sources */,
 				FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */,
 				FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */,
 				FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */,

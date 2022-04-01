@@ -1,12 +1,12 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["mean", "multiply"],
+        "nextIDs": ["mean", "add"],
         "nextTextureIndices": [0, 1]
     },
     {
         "id": "mean",
-        "nextIDs": ["multiply"],
+        "nextIDs": ["add"],
         "nextTextureIndices": [0],
         "filterDesc": {
             "type": "MeanFilter",
@@ -16,9 +16,9 @@
         }
     },
     {
-        "id": "multiply",
+        "id": "add",
         "filterDesc": {
-            "type": "MultiplyFilter"
+            "type": "AddFilter"
         }
     }
 ]

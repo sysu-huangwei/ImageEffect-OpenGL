@@ -26,9 +26,17 @@ public:
     virtual void renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) override;
     
 protected:
+    // true: 乘  false: 除
+    bool multiplyOrDivide = true;
+    // 防止除0
+    float eps = 0.04f;
     
     /// 是否所有输入已就绪
     virtual bool isAllInputReady() override;
+    
+    /// 设置参数
+    /// @param param 参数
+    virtual void setParams(const std::map<std::string, std::string> &param) override;
 };
 
 }

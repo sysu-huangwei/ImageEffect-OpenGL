@@ -26,6 +26,8 @@ void MultiplyFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFram
         
         program->setTextureAtIndex("u_texture", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
         program->setTextureAtIndex("u_texture1", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
+        program->setUniform1f("multiplyOrDivide", (float)multiplyOrDivide);
+        program->setUniform1f("eps", (float)eps);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         
@@ -33,6 +35,15 @@ void MultiplyFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFram
     }
     
     unlockAndClearAllInputFrameBuffers();
+}
+
+void MultiplyFilter::setParams(const std::map<std::string, std::string> &param) {
+    if (param.find(FilterParam_Multiply_MultiplyOrDivide) != param.end()) {
+        multiplyOrDivide = (bool)std::stoi(param.at(FilterParam_Multiply_MultiplyOrDivide));
+    }
+    if (param.find(FilterParam_Multiply_EPS) != param.end()) {
+        eps = std::stof(param.at(FilterParam_Multiply_EPS));
+    }
 }
 
 bool MultiplyFilter::isAllInputReady() {

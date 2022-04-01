@@ -42,6 +42,8 @@
 #define FilterParam_BlurSub_Direction FilterType_BlurSub "_Direction"
 #define FilterParam_Blur_Alpha FilterType_Blur "_Alpha"
 #define FilterParam_Mean_Alpha FilterType_Mean "_Alpha"
+#define FilterParam_Multiply_MultiplyOrDivide FilterType_Multiply "_MultiplyOrDivide"
+#define FilterParam_Multiply_EPS FilterType_Multiply "_EPS"
 #define FilterParam_Sharpen_Alpha FilterType_SharpenUSM "_SharpenAlpha"
 #define FilterParam_SmallHead_Degree FilterType_SmallHead "_SmallHeadDegree"
 

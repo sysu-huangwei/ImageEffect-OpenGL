@@ -8,6 +8,7 @@
 #include "BaseGLUtils.hpp"
 #include "cJSON.h"
 #include "BaseDefine.h"
+#include "BaseLog.h"
 
 namespace effect {
 
@@ -86,6 +87,8 @@ std::vector<FilterNodeDescription> EffectConfigParser::parseJsonToDescription(st
                 descriptions.push_back(desc);
             }
         }
+    } else {
+        LOGE("Error: 素材解析错！ 配置：\n%s", json.c_str());
     }
     
     cJSON_Delete(root);

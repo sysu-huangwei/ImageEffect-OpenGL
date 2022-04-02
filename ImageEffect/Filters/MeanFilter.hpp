@@ -36,7 +36,7 @@ public:
     
     
 protected:
-    float alpha = 0.0f;
+    float alpha = 1.0f;
     float widthOffset = 0.0f, heightOffset = 0.0f;
 };
 

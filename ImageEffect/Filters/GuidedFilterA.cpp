@@ -24,8 +24,8 @@ void GuidedFilterA::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
         program->setVertexAttribPointer("a_position", imageVertices);
         program->setVertexAttribPointer("a_texCoord", textureCoordinates);
         
-        program->setTextureAtIndex("u_originMean", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
-        program->setTextureAtIndex("u_origin2Mean", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
+        program->setTextureAtIndex("u_origin2Mean", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
+        program->setTextureAtIndex("u_originMean", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
         program->setUniform1f("eps", (float)eps);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);

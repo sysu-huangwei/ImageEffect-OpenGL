@@ -16,6 +16,7 @@
 #define FilterType_Mean "MeanFilter"
 #define FilterType_Add "AddFilter"
 #define FilterType_Multiply "MultiplyFilter"
+#define FilterType_Variance "VarianceFilter"
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"
 #define FilterType_Mix "MixFilter"

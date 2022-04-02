@@ -1,6 +1,5 @@
 //
 //  AddFilter.cpp
-//  ImageEffect
 //
 //  Created by rayyy on 2022/4/1.
 //

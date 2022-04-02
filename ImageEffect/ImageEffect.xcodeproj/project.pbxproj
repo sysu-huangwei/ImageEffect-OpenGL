@@ -44,6 +44,7 @@
 		FCFCDAC427F5A1A100A1092D /* MeanFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC227F5A1A100A1092D /* MeanFilter.cpp */; };
 		FCFCDAC727F6B6E600A1092D /* MultiplyFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */; };
 		FCFCDACA27F6EACC00A1092D /* AddFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */; };
+		FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +138,8 @@
 		FCFCDAC627F6B6E600A1092D /* MultiplyFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MultiplyFilter.hpp; sourceTree = "<group>"; };
 		FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AddFilter.cpp; sourceTree = "<group>"; };
 		FCFCDAC927F6EACC00A1092D /* AddFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AddFilter.hpp; sourceTree = "<group>"; };
+		FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VarianceFilter.cpp; sourceTree = "<group>"; };
+		FCFCDACC27F6FA7A00A1092D /* VarianceFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VarianceFilter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,8 @@
 				FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */,
 				FCFCDAC627F6B6E600A1092D /* MultiplyFilter.hpp */,
 				FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */,
+				FCFCDACC27F6FA7A00A1092D /* VarianceFilter.hpp */,
+				FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */,
 				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
 				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
 				FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */,
@@ -402,6 +407,7 @@
 				FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */,
 				FC29E7B4273B6B80003F6696 /* EffectConfigParser.cpp in Sources */,
 				FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */,
+				FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */,
 				FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */,
 				FCCA1F202739488200D5CFCA /* BackgroundMeshFilter.cpp in Sources */,
 				FCCA1F1B2739488200D5CFCA /* LutFilter.cpp in Sources */,

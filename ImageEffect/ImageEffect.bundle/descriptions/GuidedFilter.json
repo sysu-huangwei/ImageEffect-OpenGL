@@ -1,24 +1,13 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["mean", "add"],
-        "nextTextureIndices": [0, 1]
+        "nextIDs": ["variance"],
+        "nextTextureIndices": [0]
     },
     {
-        "id": "mean",
-        "nextIDs": ["add"],
-        "nextTextureIndices": [0],
+        "id": "variance",
         "filterDesc": {
-            "type": "MeanFilter",
-            "params": {
-                "MeanFilter_Alpha": "1.0"
-            }
-        }
-    },
-    {
-        "id": "add",
-        "filterDesc": {
-            "type": "AddFilter"
+            "type": "VarianceFilter"
         }
     }
 ]

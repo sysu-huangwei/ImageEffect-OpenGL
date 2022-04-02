@@ -64,7 +64,7 @@ void FrameBuffer::createTexture() {
 void FrameBuffer::createAndBindFrameBuffer() {
     glGenFramebuffers(1, &frameBufferID);
     glBindFramebuffer(GL_FRAMEBUFFER, frameBufferID);
-    isNeedReleaseTexture = true;
+    isNeedReleaseFrameBuffer = true;
 
     glBindTexture(GL_TEXTURE_2D, textureID);
     glTexImage2D(GL_TEXTURE_2D, 0, textureOptions.internalFormat, width, height, 0, textureOptions.format, textureOptions.type, 0);

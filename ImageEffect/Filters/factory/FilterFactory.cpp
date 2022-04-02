@@ -18,6 +18,9 @@
 #include "MultiplyFilter.hpp"
 #include "VarianceFilter.hpp"
 #include "MeanFilter.hpp"
+#include "GuidedFilterA.hpp"
+#include "GuidedFilterB.hpp"
+#include "GuidedFilter.hpp"
 #include "BlurSubFilter.hpp"
 #include "BlurFilter.hpp"
 #include "MixFilter.hpp"
@@ -54,6 +57,12 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<VarianceFilter>();
     } else if (filterDesc.type == FilterType_Mean) {
         filter = std::make_shared<MeanFilter>();
+    } else if (filterDesc.type == FilterType_GuidedFilterA) {
+        filter = std::make_shared<GuidedFilterA>();
+    } else if (filterDesc.type == FilterType_GuidedFilterB) {
+        filter = std::make_shared<GuidedFilterB>();
+    } else if (filterDesc.type == FilterType_GuidedFilter) {
+        filter = std::make_shared<GuidedFilter>();
     } else if (filterDesc.type == FilterType_BlurSub) {
         filter = std::make_shared<BlurSubFilter>();
     } else if (filterDesc.type == FilterType_Blur) {

@@ -45,6 +45,9 @@
 		FCFCDAC727F6B6E600A1092D /* MultiplyFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */; };
 		FCFCDACA27F6EACC00A1092D /* AddFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAC827F6EACC00A1092D /* AddFilter.cpp */; };
 		FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */; };
+		FCFCDAD027F83BCA00A1092D /* GuidedFilterA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDACE27F83BCA00A1092D /* GuidedFilterA.cpp */; };
+		FCFCDAD327F83FE500A1092D /* GuidedFilterB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAD127F83FE500A1092D /* GuidedFilterB.cpp */; };
+		FCFCDAD627F841A300A1092D /* GuidedFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFCDAD427F841A300A1092D /* GuidedFilter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +143,12 @@
 		FCFCDAC927F6EACC00A1092D /* AddFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AddFilter.hpp; sourceTree = "<group>"; };
 		FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VarianceFilter.cpp; sourceTree = "<group>"; };
 		FCFCDACC27F6FA7A00A1092D /* VarianceFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VarianceFilter.hpp; sourceTree = "<group>"; };
+		FCFCDACE27F83BCA00A1092D /* GuidedFilterA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GuidedFilterA.cpp; sourceTree = "<group>"; };
+		FCFCDACF27F83BCA00A1092D /* GuidedFilterA.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GuidedFilterA.hpp; sourceTree = "<group>"; };
+		FCFCDAD127F83FE500A1092D /* GuidedFilterB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GuidedFilterB.cpp; sourceTree = "<group>"; };
+		FCFCDAD227F83FE500A1092D /* GuidedFilterB.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GuidedFilterB.hpp; sourceTree = "<group>"; };
+		FCFCDAD427F841A300A1092D /* GuidedFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GuidedFilter.cpp; sourceTree = "<group>"; };
+		FCFCDAD527F841A300A1092D /* GuidedFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GuidedFilter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +269,14 @@
 				FCFCDAC527F6B6E600A1092D /* MultiplyFilter.cpp */,
 				FCFCDACC27F6FA7A00A1092D /* VarianceFilter.hpp */,
 				FCFCDACB27F6FA7A00A1092D /* VarianceFilter.cpp */,
-				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
+				FCFCDACF27F83BCA00A1092D /* GuidedFilterA.hpp */,
+				FCFCDACE27F83BCA00A1092D /* GuidedFilterA.cpp */,
+				FCFCDAD227F83FE500A1092D /* GuidedFilterB.hpp */,
+				FCFCDAD127F83FE500A1092D /* GuidedFilterB.cpp */,
+				FCFCDAD527F841A300A1092D /* GuidedFilter.hpp */,
+				FCFCDAD427F841A300A1092D /* GuidedFilter.cpp */,
 				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
+				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
 				FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */,
 				FCCA1EEF2739488200D5CFCA /* BlurSubFilter.cpp */,
 				FCCA1F002739488200D5CFCA /* SmoothFilter.hpp */,
@@ -409,11 +424,13 @@
 				FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */,
 				FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */,
 				FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */,
+				FCFCDAD027F83BCA00A1092D /* GuidedFilterA.cpp in Sources */,
 				FCCA1F202739488200D5CFCA /* BackgroundMeshFilter.cpp in Sources */,
 				FCCA1F1B2739488200D5CFCA /* LutFilter.cpp in Sources */,
 				FCFCDAC727F6B6E600A1092D /* MultiplyFilter.cpp in Sources */,
 				FCCA1F272739488200D5CFCA /* MixFilter.cpp in Sources */,
 				FCCA1F232739488200D5CFCA /* FilterChain.cpp in Sources */,
+				FCFCDAD627F841A300A1092D /* GuidedFilter.cpp in Sources */,
 				FCCA1F262739488200D5CFCA /* FilterNode.cpp in Sources */,
 				FCCA1F162739488200D5CFCA /* SmoothFilter.cpp in Sources */,
 				FC29F72427453318003F6696 /* SaturationFilter.cpp in Sources */,
@@ -427,6 +444,7 @@
 				FCCA1F1E2739488200D5CFCA /* MeshFilter.cpp in Sources */,
 				FCCA1EE8273947EF00D5CFCA /* ProgramPool.cpp in Sources */,
 				FCCA1ECD2739473D00D5CFCA /* BaseLog.cpp in Sources */,
+				FCFCDAD327F83FE500A1092D /* GuidedFilterB.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

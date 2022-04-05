@@ -44,6 +44,7 @@
 #define FilterParam_Lut_Path FilterType_Lut "_Path"
 #define FilterParam_Lut_Alpha FilterType_Lut "_Alpha"
 #define FilterParam_Mix_Alpha FilterType_Mix "_Alpha"
+#define FilterParam_Guided_Alpha FilterType_GuidedFilter "_Alpha"
 #define FilterParam_BlurSub_Direction FilterType_BlurSub "_Direction"
 #define FilterParam_Blur_Alpha FilterType_Blur "_Alpha"
 #define FilterParam_Mean_Alpha FilterType_Mean "_Alpha"

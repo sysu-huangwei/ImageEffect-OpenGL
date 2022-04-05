@@ -1,53 +1,13 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["multiply", "multiply", "originMean", "guided"],
-        "nextTextureIndices": [0, 1, 0, 0]
-    },
-    {
-        "id": "multiply",
-        "nextIDs": ["origin2Mean"],
-        "nextTextureIndices": [0],
-        "filterDesc": {
-            "type": "MultiplyFilter"
-        }
-    },
-    {
-        "id": "originMean",
-        "nextIDs": ["guidedA", "guidedB"],
-        "nextTextureIndices": [0, 0],
-        "filterDesc": {
-            "type": "MeanFilter"
-        }
-    },
-    {
-        "id": "origin2Mean",
         "nextIDs": ["guidedA"],
-        "nextTextureIndices": [1],
-        "filterDesc": {
-            "type": "MeanFilter"
-        }
+        "nextTextureIndices": [0]
     },
     {
         "id": "guidedA",
-        "nextIDs": ["guidedB", "guided"],
-        "nextTextureIndices": [1, 1],
         "filterDesc": {
             "type": "GuidedFilterA"
-        }
-    },
-    {
-        "id": "guidedB",
-        "nextIDs": ["guided"],
-        "nextTextureIndices": [2],
-        "filterDesc": {
-            "type": "GuidedFilterB"
-        }
-    },
-    {
-        "id": "guided",
-        "filterDesc": {
-            "type": "GuidedFilter"
         }
     }
 ]

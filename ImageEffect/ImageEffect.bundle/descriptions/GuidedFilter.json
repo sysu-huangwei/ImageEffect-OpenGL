@@ -1,13 +1,13 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["guidedA"],
+        "nextIDs": ["guidedA", "guidedB"],
         "nextTextureIndices": [0]
     },
     {
         "id": "guidedA",
         "nextIDs": ["guidedB"],
-        "nextTextureIndices": [0],
+        "nextTextureIndices": [1],
         "filterDesc": {
             "type": "GuidedFilterA"
         }

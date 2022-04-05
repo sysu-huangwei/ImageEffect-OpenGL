@@ -97,5 +97,5 @@ void main()
     highp vec3 resultColor = meanA * originColor + meanB;
     resultColor = mix(originColor, resultColor, alpha);
     
-    gl_FragColor = vec4(resultColor, 1.0);
+    gl_FragColor = texture2D(u_origin, texcoordOut);//vec4(resultColor, 1.0);
 }

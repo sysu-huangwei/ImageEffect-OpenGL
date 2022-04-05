@@ -57,20 +57,18 @@ void main()
         origin2[i] = origin[i] * origin[i];
     }
     
-    
     highp vec3 originMean = meanBlur(origin);
     highp vec3 origin2Mean = meanBlur(origin2);
     
-    highp vec3 originMean2 = originMean * originMean;
+    originMean = mix(origin[0], originMean, alpha);
+    origin2Mean = mix(origin2[0], origin2Mean, alpha);
     
+    highp vec3 originMean2 = originMean * originMean;
     
     highp vec3 variance = origin2Mean - originMean2;
     
     highp vec3 A = variance / (variance + eps);
     highp vec3 B = originMean - A * originMean;
-    
-    highp vec3 resultColor = A * origin[0] + B;
-    resultColor = mix(origin[0], resultColor, alpha);
     
     if (texcoordOut.x < 0.5) {
         gl_FragColor = vec4((A + 1.0) * 0.5, 1.0);

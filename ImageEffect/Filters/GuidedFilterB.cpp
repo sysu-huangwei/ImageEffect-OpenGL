@@ -12,6 +12,15 @@ void GuidedFilterB::init() {
     BaseFilter::initWithVertexStringAndFragmentString("simple", "guidedB");
 }
 
+void GuidedFilterB::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {
+    BaseFilter::setInputFrameBufferAtIndex(inputFrameBuffer, index);
+    if (inputFrameBuffer) {
+        widthOffset = 1.0f / inputFrameBuffer->getWidth();
+        heightOffset = 1.0f / inputFrameBuffer->getHeight();
+    }
+    setOutputSize(firstInputWidth * 0.5, firstInputHeight);
+}
+
 void GuidedFilterB::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
     if (isNeedRender() && outputFrameBuffer) {
         outputFrameBuffer->activeFrameBuffer();
@@ -24,8 +33,11 @@ void GuidedFilterB::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
         program->setVertexAttribPointer("a_position", imageVertices);
         program->setVertexAttribPointer("a_texCoord", textureCoordinates);
         
-        program->setTextureAtIndex("u_originMean", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
-        program->setTextureAtIndex("u_A", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
+        program->setTextureAtIndex("u_origin", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
+        program->setTextureAtIndex("u_AB", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
+        
+        program->setUniform2f("offset", widthOffset, heightOffset);
+        program->setUniform1f("alpha", alpha);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         
@@ -37,6 +49,12 @@ void GuidedFilterB::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
 
 bool GuidedFilterB::isAllInputReady() {
     return inputFrameBuffers.size() == 2;
+}
+
+void GuidedFilterB::setParams(const std::map<std::string, std::string> &param) {
+    if (param.find(FilterParam_Guided_Alpha) != param.end()) {
+        alpha = std::stof(param.at(FilterParam_Guided_Alpha));
+    }
 }
 
 }

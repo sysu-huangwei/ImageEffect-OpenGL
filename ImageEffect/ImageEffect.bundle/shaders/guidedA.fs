@@ -72,5 +72,10 @@ void main()
     highp vec3 resultColor = A * origin[0] + B;
     resultColor = mix(origin[0], resultColor, alpha);
     
-    gl_FragColor = vec4(resultColor, 1.0);
+    if (texcoordOut.x < 0.5) {
+        gl_FragColor = vec4((A + 1.0) * 0.5, 1.0);
+    } else {
+        gl_FragColor = vec4((B + 1.0) * 0.5, 1.0);
+    }
+    
 }

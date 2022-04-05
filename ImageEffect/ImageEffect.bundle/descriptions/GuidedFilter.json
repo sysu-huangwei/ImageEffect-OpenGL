@@ -6,8 +6,16 @@
     },
     {
         "id": "guidedA",
+        "nextIDs": ["guidedB"],
+        "nextTextureIndices": [0],
         "filterDesc": {
             "type": "GuidedFilterA"
+        }
+    },
+    {
+        "id": "guidedB",
+        "filterDesc": {
+            "type": "GuidedFilterB"
         }
     }
 ]

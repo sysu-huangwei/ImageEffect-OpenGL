@@ -18,6 +18,7 @@ void GuidedFilterA::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inpu
         widthOffset = 1.0f / inputFrameBuffer->getWidth();
         heightOffset = 1.0f / inputFrameBuffer->getHeight();
     }
+    setOutputSize(firstInputWidth * 2.0, firstInputHeight);
 }
 
 void GuidedFilterA::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {

@@ -93,12 +93,12 @@ void main()
     meanA = meanA * 2.0 - 1.0;
     meanB = meanB * 2.0 - 1.0;
     
-    meanA = mix(colorA[0], meanA * 2.0 - 1.0, alpha);
-    meanB = mix(colorB[0], meanB * 2.0 - 1.0, alpha);
+    meanA = mix(colorA[0] * 2.0 - 1.0, meanA, alpha);
+    meanB = mix(colorB[0] * 2.0 - 1.0, meanB, alpha);
     
     highp vec3 originColor = texture2D(u_origin, texcoordOut).rgb;
     highp vec3 resultColor = meanA * originColor + meanB;
     resultColor = mix(originColor, resultColor, alpha);
     
-    gl_FragColor = texture2D(u_AB, texcoordOut);//vec4(resultColor, 1.0);
+    gl_FragColor = vec4(resultColor, 1.0);
 }

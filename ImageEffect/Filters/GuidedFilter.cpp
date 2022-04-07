@@ -8,36 +8,24 @@
 
 namespace effect {
 
-void GuidedFilter::init() {
-    BaseFilter::initWithVertexStringAndFragmentString("simple", "guided");
-}
-
-void GuidedFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
-    if (isNeedRender() && outputFrameBuffer) {
-        outputFrameBuffer->activeFrameBuffer();
-        
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(0.0f,0.0f,0.0f,1.0f);
-        
-        program->use();
-        
-        program->setVertexAttribPointer("a_position", imageVertices);
-        program->setVertexAttribPointer("a_texCoord", textureCoordinates);
-        
-        program->setTextureAtIndex("u_origin", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
-        program->setTextureAtIndex("u_meanA", inputFrameBuffers[1]->getTextureID(), 2 + inputFrameBufferIndices[1]);
-        program->setTextureAtIndex("u_meanB", inputFrameBuffers[2]->getTextureID(), 2 + inputFrameBufferIndices[2]);
-        
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-        
-        glBindFramebuffer(GL_FRAMEBUFFER, GL_NONE);
-    }
+GuidedFilter::GuidedFilter() {
+    FilterNodeDescription begin = defaultBeginNodeDescription;
+    begin.nextIDs.push_back("guided1");
+    begin.nextIDs.push_back("guided2");
     
-    unlockAndClearAllInputFrameBuffers();
-}
-
-bool GuidedFilter::isAllInputReady() {
-    return inputFrameBuffers.size() == 3;
+    FilterNodeDescription guided1;
+    guided1.id = "guided1";
+    guided1.nextIDs.push_back("guided2");
+    guided1.nextTextureIndices.push_back(1);
+    guided1.filterDesc.type = FilterType_GuidedSubFilter1;
+    
+    FilterNodeDescription guided2;
+    guided2.id = "guided2";
+    guided2.filterDesc.type = FilterType_GuidedSubFilter2;
+    
+    nodeDescriptions.push_back(begin);
+    nodeDescriptions.push_back(guided1);
+    nodeDescriptions.push_back(guided2);
 }
 
 }

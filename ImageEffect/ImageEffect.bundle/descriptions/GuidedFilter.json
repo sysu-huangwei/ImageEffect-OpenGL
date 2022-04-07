@@ -1,21 +1,12 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["guided1", "guided2"],
-        "nextTextureIndices": [0]
+        "nextIDs": ["guided"]
     },
     {
-        "id": "guided1",
-        "nextIDs": ["guided2"],
-        "nextTextureIndices": [1],
+        "id": "guided",
         "filterDesc": {
-            "type": "GuidedSubFilter1"
-        }
-    },
-    {
-        "id": "guided2",
-        "filterDesc": {
-            "type": "GuidedSubFilter2"
+            "type": "GuidedFilter"
         }
     }
 ]

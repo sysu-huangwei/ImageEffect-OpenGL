@@ -1,22 +1,22 @@
 //
-//  GuidedFilterB.hpp
+//  GuidedSubFilter1.hpp
 //
 //  Created by rayyy on 2022/4/2.
 //
 
-#ifndef GuidedFilterB_hpp
-#define GuidedFilterB_hpp
+#ifndef GuidedSubFilter1_hpp
+#define GuidedSubFilter1_hpp
 
 #include "BaseFilter.hpp"
 
 namespace effect {
 
-/// 导向滤波计算图像B
-class GuidedFilterB : public BaseFilter {
+/// 导向滤波前半部分
+class GuidedSubFilter1 : public BaseFilter {
 public:
     
     /// 滤镜的类型
-    std::string filterType() override { return FilterType_GuidedFilterB; }
+    std::string filterType() override { return FilterType_GuidedSubFilter1; }
     
     /// 初始化，必须在GL线程，子类实现这个方法去做GL相关的初始化操作
     virtual void init() override;
@@ -33,6 +33,8 @@ public:
 protected:
     float alpha = 1.0f;
     float widthOffset = 0.0f, heightOffset = 0.0f;
+    // 正则化参数e
+    float eps = 0.02f;
     
     /// 是否所有输入已就绪
     virtual bool isAllInputReady() override;
@@ -44,4 +46,4 @@ protected:
 
 }
 
-#endif /* GuidedFilterB_hpp */
+#endif /* GuidedSubFilter1_hpp */

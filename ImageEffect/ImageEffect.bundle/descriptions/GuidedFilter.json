@@ -1,21 +1,21 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["guidedA", "guidedB"],
+        "nextIDs": ["guided1", "guided2"],
         "nextTextureIndices": [0]
     },
     {
-        "id": "guidedA",
-        "nextIDs": ["guidedB"],
+        "id": "guided1",
+        "nextIDs": ["guided2"],
         "nextTextureIndices": [1],
         "filterDesc": {
-            "type": "GuidedFilterA"
+            "type": "GuidedSubFilter1"
         }
     },
     {
-        "id": "guidedB",
+        "id": "guided2",
         "filterDesc": {
-            "type": "GuidedFilterB"
+            "type": "GuidedSubFilter2"
         }
     }
 ]

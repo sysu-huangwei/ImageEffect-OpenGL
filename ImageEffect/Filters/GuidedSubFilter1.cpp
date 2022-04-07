@@ -1,18 +1,18 @@
 //
-//  GuidedFilterA.cpp
+//  GuidedSubFilter1.cpp
 //
 //  Created by rayyy on 2022/4/2.
 //
 
-#include "GuidedFilterA.hpp"
+#include "GuidedSubFilter1.hpp"
 
 namespace effect {
 
-void GuidedFilterA::init() {
-    BaseFilter::initWithVertexStringAndFragmentString("simple", "guidedA");
+void GuidedSubFilter1::init() {
+    BaseFilter::initWithVertexStringAndFragmentString("simple", "guided1");
 }
 
-void GuidedFilterA::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {
+void GuidedSubFilter1::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inputFrameBuffer, int index) {
     BaseFilter::setInputFrameBufferAtIndex(inputFrameBuffer, index);
     if (inputFrameBuffer) {
         widthOffset = 1.0f / inputFrameBuffer->getWidth();
@@ -21,7 +21,7 @@ void GuidedFilterA::setInputFrameBufferAtIndex(std::shared_ptr<FrameBuffer> inpu
     setOutputSize(firstInputWidth * 2.0, firstInputHeight);
 }
 
-void GuidedFilterA::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
+void GuidedSubFilter1::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
     if (isNeedRender() && outputFrameBuffer) {
         outputFrameBuffer->activeFrameBuffer();
         
@@ -46,7 +46,7 @@ void GuidedFilterA::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
     unlockAndClearAllInputFrameBuffers();
 }
 
-void GuidedFilterA::setParams(const std::map<std::string, std::string> &param) {
+void GuidedSubFilter1::setParams(const std::map<std::string, std::string> &param) {
     if (param.find(FilterParam_Multiply_EPS) != param.end()) {
         eps = std::stof(param.at(FilterParam_Multiply_EPS));
     }
@@ -55,7 +55,7 @@ void GuidedFilterA::setParams(const std::map<std::string, std::string> &param) {
     }
 }
 
-bool GuidedFilterA::isAllInputReady() {
+bool GuidedSubFilter1::isAllInputReady() {
     return inputFrameBuffers.size() == 1;
 }
 

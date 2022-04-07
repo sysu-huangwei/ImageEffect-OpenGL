@@ -31,10 +31,10 @@ public:
     virtual void renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) override;
     
 protected:
-    float alpha = 0.0f;
+    float alpha = 1.0f;
     float widthOffset = 0.0f, heightOffset = 0.0f;
     // 正则化参数e
-    float eps = 0.04f;
+    float eps = 0.02f;
     
     /// 是否所有输入已就绪
     virtual bool isAllInputReady() override;

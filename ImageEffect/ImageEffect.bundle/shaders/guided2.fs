@@ -1,12 +1,13 @@
 precision highp float;
 
-uniform sampler2D u_origin;
-uniform sampler2D u_AB;
+uniform sampler2D u_origin; // 原图
+uniform sampler2D u_AB;    // guided1的结果，左边是导向滤波的a结果，右边是导向滤波的b结果
 varying vec2 texcoordOut;
 
-uniform vec2 offset;
-uniform float alpha;
+uniform vec2 offset;  // 单个像素步长
+uniform float alpha;   // 模糊程度
 
+// 均值模糊，5*5
 vec3 meanBlur(vec3 colors[25]) {
     highp vec3 sum = vec3(0.0);
     for (int i = 0; i < 25; i++) {
@@ -17,6 +18,7 @@ vec3 meanBlur(vec3 colors[25]) {
 
 void main()
 {
+    // 采样图 A 的 5*5 个点
     highp vec3 colorA[25];
     highp vec2 texcoordA = vec2(texcoordOut.x * 0.5, texcoordOut.y);
     
@@ -52,6 +54,7 @@ void main()
     colorA[23] = texture2D(u_AB, texcoordA + vec2(offset.x, -2.0 * offset.y)).rgb;
     colorA[24] = texture2D(u_AB, texcoordA + vec2(-offset.x, -2.0 * offset.y)).rgb;
     
+    // 采样图 B 的 5*5 个点
     highp vec3 colorB[25];
     highp vec2 texcoordB = vec2(texcoordOut.x * 0.5 + 0.5, texcoordOut.y);
     
@@ -87,6 +90,7 @@ void main()
     colorB[23] = texture2D(u_AB, texcoordB + vec2(offset.x, -2.0 * offset.y)).rgb;
     colorB[24] = texture2D(u_AB, texcoordB + vec2(-offset.x, -2.0 * offset.y)).rgb;
     
+    // 分别对图A和图B做均值模糊
     highp vec3 meanA = meanBlur(colorA);
     highp vec3 meanB = meanBlur(colorB);
     
@@ -96,6 +100,7 @@ void main()
     meanA = mix(colorA[0] * 2.0 - 1.0, meanA, alpha);
     meanB = mix(colorB[0] * 2.0 - 1.0, meanB, alpha);
     
+    // 导向滤波的最后一步融合
     highp vec3 originColor = texture2D(u_origin, texcoordOut).rgb;
     highp vec3 resultColor = meanA * originColor + meanB;
     resultColor = mix(originColor, resultColor, alpha);

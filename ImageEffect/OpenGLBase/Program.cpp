@@ -90,6 +90,11 @@ void Program::setVertexAttribPointer(std::string name, const GLvoid* ptr) {
     glVertexAttribPointer(location, 2, GL_FLOAT, false, 0, ptr);
 }
 
+void Program::disableVertexAttribPointer(std::string name) {
+    GLint location = getAttributeLocation(name);
+    glDisableVertexAttribArray(location);
+}
+
 void Program::setUniform1i(std::string name, int x) {
     GLint location = getUniformLocation(name);
     glUniform1i(location, x);

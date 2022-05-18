@@ -8,14 +8,32 @@
 #include "BaseGLUtils.hpp"
 #include "EffectConfigParser.hpp"
 #include "BaseDefine.h"
+#include "BackgroundPointFilter.hpp"
 
 namespace effect {
 
 EffectEngine::EffectEngine(std::string configFilePath) {
-    unsigned long dataSise;
-    char *json = BaseGLUtils::loadFileToMemory(configFilePath.c_str(), dataSise);
-    nodeDescriptions = EffectConfigParser::parseJsonToDescription(std::string(json));
-    SAFE_DELETE_ARRAY(json);
+//    unsigned long dataSise;
+//    char *json = BaseGLUtils::loadFileToMemory(configFilePath.c_str(), dataSise);
+//    nodeDescriptions = EffectConfigParser::parseJsonToDescription(std::string(json));
+//    SAFE_DELETE_ARRAY(json);
+    FilterNodeDescription begin = defaultBeginNodeDescription;
+//    begin.nextIDs.push_back("copy");
+//    begin.nextTextureIndices.push_back(0);
+    begin.nextIDs.push_back("point");
+    begin.nextTextureIndices.push_back(0);
+    
+//    FilterNodeDescription copy;
+//    copy.id = "copy";
+//    copy.filterDesc.type = FilterType_Copy;
+    
+    FilterNodeDescription point;
+    point.id = "point";
+    point.filterDesc.type = FilterType_Point;
+    
+    nodeDescriptions.push_back(begin);
+//    nodeDescriptions.push_back(copy);
+    nodeDescriptions.push_back(point);
 };
 
 void EffectEngine::setBGRASmallImageData(unsigned char *data, size_t width, size_t height, size_t bytesPerRow) {
@@ -74,5 +92,12 @@ void EffectEngine::setBGRASmallImageData(unsigned char *data, size_t width, size
 float maxBrightness;
 float minBrightness;
 float averageBrightness;
+
+void EffectEngine::setPoints(std::vector<BasePoint> points) {
+    std::shared_ptr<BackgroundPointFilter> pointFilter = std::static_pointer_cast<BackgroundPointFilter>(getFilterByNodeID("point"));
+    if (pointFilter) {
+        pointFilter->setPoints(points);
+    }
+}
 
 }

@@ -6,4 +6,5 @@ void main()
 {
     texcoordOut = a_texCoord;
     gl_Position = vec4(a_position, 0.0, 1.0);
+    gl_PointSize = 10.0;
 }

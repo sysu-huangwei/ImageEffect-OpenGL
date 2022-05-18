@@ -11,22 +11,26 @@ namespace effect {
 
 BackgroundPointFilter::BackgroundPointFilter() {
     FilterNodeDescription begin = defaultBeginNodeDescription;
-    begin.nextIDs.push_back("copy");
-    begin.nextTextureIndices.push_back(0);
+//    begin.nextIDs.push_back("copy");
+//    begin.nextTextureIndices.push_back(0);
     begin.nextIDs.push_back("point");
     begin.nextTextureIndices.push_back(0);
     
-    FilterNodeDescription copy;
-    copy.id = "copy";
-    copy.filterDesc.type = FilterType_Copy;
+//    FilterNodeDescription copy;
+//    copy.id = "copy";
+//    copy.filterDesc.type = FilterType_Copy;
     
     FilterNodeDescription point;
     point.id = "point";
     point.filterDesc.type = FilterType_Point;
     
     nodeDescriptions.push_back(begin);
-    nodeDescriptions.push_back(copy);
+//    nodeDescriptions.push_back(copy);
     nodeDescriptions.push_back(point);
+}
+
+void BackgroundPointFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
+    FilterChain::renderToFrameBuffer(outputFrameBuffer);
 }
 
 void BackgroundPointFilter::setPoints(std::vector<BasePoint> points) {

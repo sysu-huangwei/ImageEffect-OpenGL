@@ -20,6 +20,11 @@ public:
     
     void setBGRASmallImageData(unsigned char *data, size_t width, size_t height, size_t bytesPerRow);
     
+    // TODO:
+    /// 设置需要画的点，debug用
+    /// @param points 点位信息，需要归一化到0到1的点
+    void setPoints(std::vector<BasePoint> points);
+    
     /// 滤镜的类型
     std::string filterType() override { return "EffectEngine"; }
     

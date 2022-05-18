@@ -42,6 +42,8 @@ public:
     /// @param ptr 数组指针，float类型，（x，y）
     void setVertexAttribPointer(std::string name, const GLvoid* ptr);
     
+    void disableVertexAttribPointer(std::string name);
+    
     /// 设置uniform到Program
     /// @param name [uniform] 的名字
     /// @param x glUniform1i

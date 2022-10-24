@@ -1,4 +1,7 @@
 # 图像特效库-OpenGLES版本
+
+[toc]
+
 ### 1.亮度
 * PS里的亮度调整，主要是控制图片整体的亮度，可以弥补曝光过度和曝光补足需要补光的问题。
 ![PS](https://img-blog.csdnimg.cn/558ef05c760a41958f514e428652b7b1.png)
@@ -180,4 +183,61 @@ void main()
 
 
 
+### 4.色阶
+* 色阶是什么：色阶就是用直方图描述出的整张图片的明暗信息。
+* 从左至右是从暗到亮的像素分布，黑色三角代表最暗地方（纯黑），白色三角代表最亮地方（纯白）。灰色三角代表中间调。
+![PS](https://img-blog.csdnimg.cn/89025e10e45b43a98a906952ea78d822.png)
+
+* 每一个色阶定义有两组值：
+	* 一组是输入色阶值，包含黑灰白三个值， 上图中：黑点值为0，灰点为1.0，白点为255
+	* 另一组是输入色阶值，包含黑白两个值，上图中：输出色阶黑为0，白为255
+* 色阶调整的实现是：
+	* 当输入值<黑点值时，全部变为输出色阶的黑值。
+	* 当输入值>白点时，全部变为输出色阶的白值。
+	* 当输入值介于黑值与白值之间时，则结合灰度系数，按比例重新计算，变为一个新的值。
+
+##### 使用OpenGL实现：
+
+* 顶点着色器：
+
+```c
+attribute vec2 a_position;
+attribute vec2 a_texCoord;
+varying vec2 texcoordOut;
+
+void main()
+{
+    texcoordOut = a_texCoord;
+    gl_Position = vec4(a_position, 0.0, 1.0);
+}
+```
+
+* 片段着色器：
+
+	* `u_texture`为原图，`highLight`为白点值，变化范围0到1，`shadow`为黑点值，变化范围0到1，`midtone`为灰点值，变化范围0到1。 需要注意必须满足：`shadow` < `midtone` < `highLight`
+
+```c
+precision highp float;
+
+uniform sampler2D u_texture;
+varying vec2 texcoordOut;
+
+uniform float highLight;
+uniform float shadow;
+uniform float midtone;
+
+void main()
+{
+    vec4 srcColor = texture2D(u_texture, texcoordOut);
+    
+    float diff = highLight - shadow;
+    vec3 rgbDiff = max(srcColor.rgb - shadow, 0.0);
+    
+    gl_FragColor = vec4(clamp(pow(rgbDiff / diff, vec3(1.0 / midtone)), 0.0, 1.0), srcColor.a);
+}
+```
+
+##### 效果：
+效果为黑点值0.1，白点值0.9，只移动灰点值的效果：
+![效果](https://img-blog.csdnimg.cn/9a041661450d4d36aa4729f7b014f383.gif)
 

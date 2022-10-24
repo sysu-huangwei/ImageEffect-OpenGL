@@ -43,10 +43,10 @@ void LevelFilter::setParams(const std::map<std::string, std::string> &param) {
         setHighLight(std::stof(param.at(FilterParam_Level_HighLight)));
     }
     if (param.find(FilterParam_Level_Shadow) != param.end()) {
-        setHighLight(std::stof(param.at(FilterParam_Level_Shadow)));
+        setShadow(std::stof(param.at(FilterParam_Level_Shadow)));
     }
     if (param.find(FilterParam_Level_Midtone) != param.end()) {
-        setHighLight(std::stof(param.at(FilterParam_Level_Midtone)));
+        setMidtone(std::stof(param.at(FilterParam_Level_Midtone)));
     }
 }
 

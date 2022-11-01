@@ -9,5 +9,5 @@ void main()
     vec4 textureColor = texture2D(u_texture, texcoordOut);
     vec4 stickerColor = texture2D(u_sticker, texcoordOut);
     
-    gl_FragColor = mix(textureColor, stickerColor, stickerColor.a);
+    gl_FragColor = vec4(mix(textureColor.rgb, stickerColor.rgb, stickerColor.a), textureColor.a);
 }

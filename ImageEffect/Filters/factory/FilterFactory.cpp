@@ -9,6 +9,7 @@
 #include "BaseLog.h"
 
 #include "CopyFilter.hpp"
+#include "LutFilter.hpp"
 #include "BrightnessFilter.hpp"
 #include "ContrastFilter.hpp"
 #include "SaturationFilter.hpp"
@@ -39,6 +40,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
     
     if (filterDesc.type == FilterType_Copy) {
         filter = std::make_shared<CopyFilter>();
+    } else if (filterDesc.type == FilterType_Lut) {
+        filter = std::make_shared<LutFilter>();
     } else if (filterDesc.type == FilterType_Brightness) {
         filter = std::make_shared<BrightnessFilter>();
     } else if (filterDesc.type == FilterType_Contrast) {

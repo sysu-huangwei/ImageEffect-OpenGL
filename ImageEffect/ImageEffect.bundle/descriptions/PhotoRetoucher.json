@@ -26,12 +26,22 @@
     },
     {
         "id": "level",
-        "nextIDs": ["sharpen"],
+        "nextIDs": ["lut"],
         "filterDesc": {
             "type": "LevelFilter",
             "params" : {
                 "LevelFilter_HighLight" : "0.9",
                 "LevelFilter_Shadow" : "0.1"
+            }
+        }
+    },
+    {
+        "id": "lut",
+        "nextIDs": ["sharpen"],
+        "filterDesc": {
+            "type": "LutFilter",
+            "params" : {
+                "LutFilter_Alpha" : "1.0"
             }
         }
     },

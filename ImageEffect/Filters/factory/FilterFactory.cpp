@@ -32,6 +32,7 @@
 #include "BackgroundLineFilter.hpp"
 #include "MeshFilter.hpp"
 #include "BackgroundMeshFilter.hpp"
+#include "StickerFilter.hpp"
 
 namespace effect {
     
@@ -86,6 +87,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<MeshFilter>();
     } else if (filterDesc.type == FilterType_BackgroundMesh) {
         filter = std::make_shared<BackgroundMeshFilter>();
+    } else if (filterDesc.type == FilterType_Sticker) {
+        filter = std::make_shared<StickerFilter>();
     } else {
         LOGE("Error: FilterFactory::createFilter: invalid filter type = %s", filterDesc.type.c_str());
         assert(false);

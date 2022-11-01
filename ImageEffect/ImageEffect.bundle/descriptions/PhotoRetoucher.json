@@ -47,8 +47,15 @@
     },
     {
         "id": "sharpen",
+        "nextIDs": ["sticker"],
         "filterDesc": {
             "type": "SharpenUSMFilter"
+        }
+    },
+    {
+        "id": "sticker",
+        "filterDesc": {
+            "type": "StickerFilter"
         }
     }
 ]

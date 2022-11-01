@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A046C3529118C6C008BFE23 /* StickerFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A046C3329118C6C008BFE23 /* StickerFilter.cpp */; };
 		FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */; };
 		FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */; };
 		FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7AE273B6B4D003F6696 /* cJSON.c */; };
@@ -64,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A046C3329118C6C008BFE23 /* StickerFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StickerFilter.cpp; sourceTree = "<group>"; };
+		3A046C3429118C6C008BFE23 /* StickerFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StickerFilter.hpp; sourceTree = "<group>"; };
 		FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrightnessFilter.cpp; sourceTree = "<group>"; };
 		FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrightnessFilter.hpp; sourceTree = "<group>"; };
 		FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectEngine.cpp; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				FCCA1EFB2739488200D5CFCA /* MeshFilter.cpp */,
 				FCCA1EF02739488200D5CFCA /* BackgroundMeshFilter.hpp */,
 				FCCA1F032739488200D5CFCA /* BackgroundMeshFilter.cpp */,
+				3A046C3429118C6C008BFE23 /* StickerFilter.hpp */,
+				3A046C3329118C6C008BFE23 /* StickerFilter.cpp */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				FCFCDACA27F6EACC00A1092D /* AddFilter.cpp in Sources */,
 				FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */,
 				FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */,
+				3A046C3529118C6C008BFE23 /* StickerFilter.cpp in Sources */,
 				FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */,
 				FCCA1EE7273947EF00D5CFCA /* Program.cpp in Sources */,
 				FCCA1F1D2739488200D5CFCA /* LineFilter.cpp in Sources */,

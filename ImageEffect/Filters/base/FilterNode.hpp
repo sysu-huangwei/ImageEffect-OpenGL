@@ -35,6 +35,7 @@ protected:
     std::shared_ptr<BaseFilter> filter = nullptr;
     
     friend class FilterChain;
+    friend class EffectEngine;
     // 下一个(或多个)渲染节点
     std::vector<std::shared_ptr<FilterNode>> nextNodes;
     // 输入给下一个(或多个)渲染节点纹理下标

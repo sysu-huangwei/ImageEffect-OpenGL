@@ -15,9 +15,14 @@
 #define SAFE_FREE(p) if(p != NULL) {free(p); p = NULL;}
 #endif
 
-typedef struct {
+typedef struct BasePoint {
     float x;
     float y;
+    BasePoint(){}
+    BasePoint(float x, float y) {
+        this->x = x;
+        this->y = y;
+    }
 } BasePoint;
 
 typedef struct {

@@ -8,6 +8,7 @@
 #include "BaseGLUtils.hpp"
 #include "EffectConfigParser.hpp"
 #include "BaseDefine.h"
+#include "BackgroundPointFilter.hpp"
 
 namespace effect {
 
@@ -17,6 +18,15 @@ EffectEngine::EffectEngine(std::string configFilePath) {
     nodeDescriptions = EffectConfigParser::parseJsonToDescription(std::string(json));
     SAFE_DELETE_ARRAY(json);
 };
+
+void EffectEngine::setPoints(std::vector<BasePoint> points) {
+    for (int i = 0; i < allNodes.size(); i++) {
+        std::shared_ptr<BackgroundPointFilter> pointFilter = std::dynamic_pointer_cast<BackgroundPointFilter>(allNodes[i]->filter);
+        if (pointFilter) {
+            pointFilter->setPoints(points);
+        }
+    }
+}
 
 void EffectEngine::setBGRASmallImageData(unsigned char *data, size_t width, size_t height, size_t bytesPerRow) {
     if (data && width > 0 && height > 0 && bytesPerRow > 0) {

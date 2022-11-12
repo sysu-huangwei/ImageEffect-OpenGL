@@ -23,6 +23,8 @@ public:
     /// 滤镜的类型
     std::string filterType() override { return "EffectEngine"; }
     
+    virtual void setPoints(std::vector<BasePoint> points);
+    
 private:
     BaseFrameColorInfo frameColorInfo;
 };

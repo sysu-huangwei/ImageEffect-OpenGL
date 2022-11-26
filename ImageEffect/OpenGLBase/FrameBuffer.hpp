@@ -44,10 +44,10 @@ public:
     /// @param textureOptions 纹理相关参数
     /// @param textureID 外部指定的纹理ID，若>0，则内部不会生成纹理
     /// @param frameBufferID 外部指定的FBO，若>0，则内部不会生成FBO
-    void init(int width, int height, bool isOnlyTexture = false, TextureOptions textureOptions = defaultTextureOptions, GLuint textureID = 0, GLuint frameBufferID = 0);
+    virtual void init(int width, int height, bool isOnlyTexture = false, TextureOptions textureOptions = defaultTextureOptions, GLuint textureID = 0, GLuint frameBufferID = 0);
     
     /// 释放GL相关资源，必须在GL线程
-    void release();
+    virtual void release();
     
     /// 激活此FBO
     void activeFrameBuffer();
@@ -76,7 +76,7 @@ public:
     
     GLuint getFrameBufferID() const { return frameBufferID; }
     
-private:
+protected:
     int width = 0, height = 0;
     GLuint textureID = 0, frameBufferID = 0;
     bool isOnlyTexture = false;

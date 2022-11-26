@@ -38,8 +38,6 @@ public:
     
     static char *loadFileToMemory(const char *filePath, unsigned long &outDataSize);
     
-private:
-    
     static std::string getShaderSourceByName(std::string shaderName, GLenum shaderType);
     
     static GLuint loadPixelsToTexture(const unsigned char *data, int width, int height, GLenum glFormat = GL_RGBA);

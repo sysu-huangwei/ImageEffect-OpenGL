@@ -13,6 +13,8 @@
 		3A046C762912DE5F008BFE23 /* vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A046C6E2912DE5E008BFE23 /* vector2.cpp */; };
 		3A046C772912DE5F008BFE23 /* delaunay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A046C702912DE5F008BFE23 /* delaunay.cpp */; };
 		3A046C782912DE5F008BFE23 /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A046C712912DE5F008BFE23 /* triangle.cpp */; };
+		3A8AC5D72931E0200078DF7E /* InputImageFrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC5D52931E0200078DF7E /* InputImageFrameBuffer.cpp */; };
+		3A8AC5DA2931EAC00078DF7E /* UIImage+TransferImageData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC5D92931EAC00078DF7E /* UIImage+TransferImageData.mm */; };
 		FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */; };
 		FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */; };
 		FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7AE273B6B4D003F6696 /* cJSON.c */; };
@@ -83,6 +85,10 @@
 		3A046C712912DE5F008BFE23 /* triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
 		3A046C722912DE5F008BFE23 /* delaunay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delaunay.h; sourceTree = "<group>"; };
 		3A046C732912DE5F008BFE23 /* triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
+		3A8AC5D52931E0200078DF7E /* InputImageFrameBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputImageFrameBuffer.cpp; sourceTree = "<group>"; };
+		3A8AC5D62931E0200078DF7E /* InputImageFrameBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputImageFrameBuffer.hpp; sourceTree = "<group>"; };
+		3A8AC5D82931EAC00078DF7E /* UIImage+TransferImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+TransferImageData.h"; sourceTree = "<group>"; };
+		3A8AC5D92931EAC00078DF7E /* UIImage+TransferImageData.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+TransferImageData.mm"; sourceTree = "<group>"; };
 		FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrightnessFilter.cpp; sourceTree = "<group>"; };
 		FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrightnessFilter.hpp; sourceTree = "<group>"; };
 		FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectEngine.cpp; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 				FCCA1F2C27394C1800D5CFCA /* Platform */,
 				FCCA1EDF273947EE00D5CFCA /* FrameBuffer.cpp */,
 				FCCA1EE1273947EE00D5CFCA /* FrameBuffer.hpp */,
+				3A8AC5D52931E0200078DF7E /* InputImageFrameBuffer.cpp */,
+				3A8AC5D62931E0200078DF7E /* InputImageFrameBuffer.hpp */,
 				FCCA1EE4273947EF00D5CFCA /* FrameBufferPool.cpp */,
 				FCCA1EDE273947EE00D5CFCA /* FrameBufferPool.hpp */,
 				FCCA1EE0273947EE00D5CFCA /* Program.cpp */,
@@ -376,6 +384,8 @@
 			children = (
 				FCCA1F2E27394C6600D5CFCA /* FileUtilsForIOS.h */,
 				FCCA1F2F27394C6600D5CFCA /* FileUtilsForIOS.mm */,
+				3A8AC5D82931EAC00078DF7E /* UIImage+TransferImageData.h */,
+				3A8AC5D92931EAC00078DF7E /* UIImage+TransferImageData.mm */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -450,6 +460,7 @@
 				FCCA1F172739488200D5CFCA /* CopyFilter.cpp in Sources */,
 				FCCA1F182739488200D5CFCA /* BlurSubFilter.cpp in Sources */,
 				3A046C3529118C6C008BFE23 /* StickerFilter.cpp in Sources */,
+				3A8AC5D72931E0200078DF7E /* InputImageFrameBuffer.cpp in Sources */,
 				FCCA1F242739488200D5CFCA /* BaseFilter.cpp in Sources */,
 				FCCA1EE7273947EF00D5CFCA /* Program.cpp in Sources */,
 				FCCA1F1D2739488200D5CFCA /* LineFilter.cpp in Sources */,
@@ -464,6 +475,7 @@
 				FC29F92227474D95003F6696 /* LevelFilter.cpp in Sources */,
 				FCCA1F192739488200D5CFCA /* BackgroundLineFilter.cpp in Sources */,
 				FC29E7B4273B6B80003F6696 /* EffectConfigParser.cpp in Sources */,
+				3A8AC5DA2931EAC00078DF7E /* UIImage+TransferImageData.mm in Sources */,
 				FCCA1F3027394C6600D5CFCA /* FileUtilsForIOS.mm in Sources */,
 				FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */,
 				FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */,

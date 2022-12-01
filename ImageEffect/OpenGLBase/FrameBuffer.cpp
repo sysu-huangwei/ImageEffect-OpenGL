@@ -18,7 +18,7 @@ void FrameBuffer::init(int width, int height, bool isOnlyTexture, TextureOptions
     this->isOnlyTexture = isOnlyTexture;
     this->textureOptions = textureOptions;
     
-    if (textureID == 0) {
+    if (textureID == 0 && frameBufferID == 0) {
         createTexture();
     } else {
         this->textureID = textureID;

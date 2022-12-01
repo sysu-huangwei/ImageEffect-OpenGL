@@ -9,7 +9,7 @@
 namespace effect {
 
 void OutputFrameBuffer::initWithFrameBufferID(GLuint outputFrameBufferID, int width, int height) {
-    FrameBuffer::init(width, height, false, defaultTextureOptions, 0, frameBufferID);
+    FrameBuffer::init(width, height, false, defaultTextureOptions, 0, outputFrameBufferID);
     enableReferenceCount = false;
 }
 

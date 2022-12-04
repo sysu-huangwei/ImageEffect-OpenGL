@@ -16,10 +16,10 @@ namespace effect {
 
 // 顶点坐标
 const static float imageVertices[8] = {
-    -1.0f, 1.0f, // top left
-    1.0f, 1.0f,  // top right
     -1.0f, -1.0f, // bottom left
     1.0f, -1.0f, // bottom right
+    -1.0f, 1.0f, // top left
+    1.0f, 1.0f,  // top right
 };
 
 // 纹理坐标

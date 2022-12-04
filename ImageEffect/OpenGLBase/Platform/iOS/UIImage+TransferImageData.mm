@@ -41,29 +41,32 @@ typedef NS_ENUM(NSUInteger , TransferImageDataFromat) {
     unsigned char* imageData = nullptr;
     int bytesPerRow;
     CGImageAlphaInfo alphaInfo;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
     switch (format) {
         case TransferImageDataFromat_ARGB:
             imageData = new unsigned char[width * height * 4];
             bytesPerRow = (int)width * 4;
             alphaInfo = kCGImageAlphaPremultipliedFirst;
+            colorSpace = CGColorSpaceCreateDeviceRGB();
             break;
         case TransferImageDataFromat_RGBA:
             imageData = new unsigned char[width * height * 4];
             bytesPerRow = (int)width * 4;
             alphaInfo = kCGImageAlphaPremultipliedLast;
+            colorSpace = CGColorSpaceCreateDeviceRGB();
             break;
         case TransferImageDataFromat_GRAY:
             imageData = new unsigned char[width * height];
             bytesPerRow = (int)width;
             alphaInfo = kCGImageAlphaNone;
+            colorSpace = CGColorSpaceCreateDeviceGray();
             break;
         default:
             break;
     }
     
-    CGColorSpaceRef cref = CGColorSpaceCreateDeviceGray();
-    CGContextRef gc = CGBitmapContextCreate(imageData, width, height, 8, bytesPerRow, cref, alphaInfo);
-    CGColorSpaceRelease(cref);
+    CGContextRef gc = CGBitmapContextCreate(imageData, width, height, 8, bytesPerRow, colorSpace, alphaInfo);
+    CGColorSpaceRelease(colorSpace);
     UIGraphicsPushContext(gc);
     
     if (!isNeedAlpha && format != TransferImageDataFromat_GRAY) {

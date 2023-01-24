@@ -35,6 +35,7 @@ void StickerFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
         
         program->setTextureAtIndex("u_texture", inputFrameBuffers[0]->getTextureID(), 2 + inputFrameBufferIndices[0]);
         program->setTextureAtIndex("u_sticker", stickerTextureID, 3);
+        program->setUniform1f("alpha", alpha);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         
@@ -47,6 +48,9 @@ void StickerFilter::renderToFrameBuffer(std::shared_ptr<FrameBuffer> outputFrame
 void StickerFilter::setParams(const std::map<std::string, std::string> &param) {
     if (param.find(FilterParam_Sticker_Path) != param.end()) {
         setStickerImagePath(param.at(FilterParam_Sticker_Path));
+    }
+    if (param.find(FilterParam_Sticker_Alpha) != param.end()) {
+        alpha = std::stof(param.at(FilterParam_Sticker_Alpha));
     }
 }
 

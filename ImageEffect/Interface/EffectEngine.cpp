@@ -10,6 +10,7 @@
 #include "BaseDefine.h"
 #include "BackgroundPointFilter.hpp"
 #include "BackgroundMeshFilter.hpp"
+#include "StickerFilter.hpp"
 
 namespace effect {
 
@@ -34,6 +35,15 @@ void EffectEngine::setMesh(std::vector<BasePoint> mesh, std::vector<BasePoint> m
         std::shared_ptr<BackgroundMeshFilter> meshFilter = std::dynamic_pointer_cast<BackgroundMeshFilter>(allNodes[i]->filter);
         if (meshFilter) {
             meshFilter->setMesh(mesh, meshStd, meshIndex, indexArrayCount);
+        }
+    }
+}
+
+void EffectEngine::setSticker(std::string path) {
+    for (int i = 0; i < allNodes.size(); i++) {
+        std::shared_ptr<StickerFilter> stickerFilter = std::dynamic_pointer_cast<StickerFilter>(allNodes[i]->filter);
+        if (stickerFilter) {
+            stickerFilter->setStickerImagePath(path);
         }
     }
 }

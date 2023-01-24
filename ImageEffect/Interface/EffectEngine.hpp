@@ -27,6 +27,8 @@ public:
     
     virtual void setMesh(std::vector<BasePoint> mesh, std::vector<BasePoint> meshStd, unsigned int *meshIndex, int indexArrayCount);
     
+    virtual void setSticker(std::string path);
+    
 private:
     BaseFrameColorInfo frameColorInfo;
 };

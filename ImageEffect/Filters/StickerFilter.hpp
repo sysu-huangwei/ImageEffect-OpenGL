@@ -33,12 +33,13 @@ public:
     /// @param param 参数
     virtual void setParams(const std::map<std::string, std::string> &param) override;
     
-protected:
-    unsigned stickerTextureID = 0;
-    
     /// 设置贴纸图路径，底层加载
     /// @param path 贴纸图的路径
     void setStickerImagePath(std::string path);
+    
+protected:
+    unsigned stickerTextureID = 0;
+    float alpha = 1.0f;
     
 };
 

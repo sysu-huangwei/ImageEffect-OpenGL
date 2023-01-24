@@ -1,12 +1,12 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["mesh"]
+        "nextIDs": ["sticker"]
     },
     {
-        "id": "mesh",
+        "id": "sticker",
         "filterDesc": {
-            "type": "BackgroundMeshFilter"
+            "type": "StickerFilter"
         }
     }
 ]

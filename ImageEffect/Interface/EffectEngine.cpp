@@ -9,6 +9,7 @@
 #include "EffectConfigParser.hpp"
 #include "BaseDefine.h"
 #include "BackgroundPointFilter.hpp"
+#include "BackgroundMeshFilter.hpp"
 
 namespace effect {
 
@@ -24,6 +25,15 @@ void EffectEngine::setPoints(std::vector<BasePoint> points) {
         std::shared_ptr<BackgroundPointFilter> pointFilter = std::dynamic_pointer_cast<BackgroundPointFilter>(allNodes[i]->filter);
         if (pointFilter) {
             pointFilter->setPoints(points);
+        }
+    }
+}
+
+void EffectEngine::setMesh(std::vector<BasePoint> mesh, std::vector<BasePoint> meshStd, unsigned int *meshIndex, int indexArrayCount) {
+    for (int i = 0; i < allNodes.size(); i++) {
+        std::shared_ptr<BackgroundMeshFilter> meshFilter = std::dynamic_pointer_cast<BackgroundMeshFilter>(allNodes[i]->filter);
+        if (meshFilter) {
+            meshFilter->setMesh(mesh, meshStd, meshIndex, indexArrayCount);
         }
     }
 }

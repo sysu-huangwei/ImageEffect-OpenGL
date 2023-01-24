@@ -25,6 +25,8 @@ public:
     
     virtual void setPoints(std::vector<BasePoint> points);
     
+    virtual void setMesh(std::vector<BasePoint> mesh, std::vector<BasePoint> meshStd, unsigned int *meshIndex, int indexArrayCount);
+    
 private:
     BaseFrameColorInfo frameColorInfo;
 };

@@ -32,6 +32,8 @@ void FilterNode::render() {
 
 void FilterNode::setOutputFrameBuffer(std::shared_ptr<FrameBuffer> outputFrameBuffer) {
     this->outputFrameBuffer = outputFrameBuffer;
+    // 这里重新设置一次是为了子类在渲染的时候可能还需要在这个setOutputSize方法里设置其他需要的数据
+    filter->setOutputSize(outputFrameBuffer->getWidth(), outputFrameBuffer->getHeight());
 }
 
 void FilterNode::setResultFrameBufferToNextNodes(std::shared_ptr<FrameBuffer> resultFrameBuffer) {

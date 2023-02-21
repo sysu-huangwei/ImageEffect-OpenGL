@@ -7,7 +7,7 @@
 #ifndef BlurFilter_hpp
 #define BlurFilter_hpp
 
-#define DEFAULT_MAX_LENGTH 180
+#define DEFAULT_MAX_LENGTH 360
 
 #include "FilterChain.hpp"
 

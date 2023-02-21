@@ -1,12 +1,12 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["sticker"]
+        "nextIDs": ["blur"]
     },
     {
-        "id": "sticker",
+        "id": "blur",
         "filterDesc": {
-            "type": "StickerFilter"
+            "type": "BlurFilter"
         }
     }
 ]

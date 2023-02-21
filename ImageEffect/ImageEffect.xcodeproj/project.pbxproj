@@ -326,8 +326,8 @@
 				FCFCDAD127F83FE500A1092D /* GuidedSubFilter2.cpp */,
 				FCFCDAD527F841A300A1092D /* GuidedFilter.hpp */,
 				FCFCDAD427F841A300A1092D /* GuidedFilter.cpp */,
-				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
 				FCCA1EFA2739488200D5CFCA /* BlurFilter.hpp */,
+				FCCA1EF42739488200D5CFCA /* BlurFilter.cpp */,
 				FCCA1F022739488200D5CFCA /* BlurSubFilter.hpp */,
 				FCCA1EEF2739488200D5CFCA /* BlurSubFilter.cpp */,
 				FCCA1F002739488200D5CFCA /* SmoothFilter.hpp */,
@@ -370,8 +370,8 @@
 				FCCA1F122739488200D5CFCA /* FilterNodeDescription.cpp */,
 				FCCA1F0A2739488200D5CFCA /* FilterNode.hpp */,
 				FCCA1F132739488200D5CFCA /* FilterNode.cpp */,
-				FCCA1F0D2739488200D5CFCA /* FilterChain.cpp */,
 				FCCA1F112739488200D5CFCA /* FilterChain.hpp */,
+				FCCA1F0D2739488200D5CFCA /* FilterChain.cpp */,
 			);
 			path = base;
 			sourceTree = "<group>";

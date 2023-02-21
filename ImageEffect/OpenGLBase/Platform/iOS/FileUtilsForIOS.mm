@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BaseDefine.h"
+#import "BaseGLUtils.hpp"
+#import "UIImage+TransferImageData.h"
 
 const char *getResourcePathForIOS() {
     return [NSBundle.mainBundle.bundlePath stringByAppendingPathComponent:@"ImageEffect.bundle"].UTF8String;
@@ -98,4 +100,31 @@ unsigned char *loadMemoryToRGBAPixelsForIOS(const char *memoryData, unsigned lon
     outWidth = image.size.width;
     outHeight = image.size.height;
     return RGBADataWithAlpha(image);
+}
+
+
+void readTextureToUIImage(int textureID, int width, int height) {
+    GLuint frameBuffer;
+    glGenFramebuffers(1, &frameBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureID, 0);
+    unsigned char *pixels = new unsigned char[width * height * 4];
+    glReadPixels(0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
+    glFinish();
+    UIImage *image = [UIImage transferToImageWithRGBAData:pixels withWidth:width withHeight:height];
+    glBindTexture(GL_TEXTURE_2D, 0);
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glDeleteFramebuffers(1, &frameBuffer);
+    delete [] pixels;
+}
+
+void readFrameBufferToUIImage(int frameBufferID, int width, int height) {
+    glBindFramebuffer(GL_FRAMEBUFFER, frameBufferID);
+    unsigned char *pixels = new unsigned char[width * height * 4];
+    glReadPixels(0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
+    glFinish();
+    UIImage *image = [UIImage transferToImageWithRGBAData:pixels withWidth:width withHeight:height];
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    delete [] pixels;
 }

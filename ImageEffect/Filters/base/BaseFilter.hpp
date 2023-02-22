@@ -22,6 +22,14 @@ const static float imageVertices[8] = {
     1.0f, -1.0f, // bottom right
 };
 
+// 顶点坐标
+const static float imageVerticesFlipY[8] = {
+    -1.0f, -1.0f, // bottom left
+    1.0f, -1.0f, // bottom right
+    -1.0f, 1.0f, // top left
+    1.0f, 1.0f,  // top right
+};
+
 // 纹理坐标
 const static float textureCoordinates[8] = {
     0.0f, 1.0f, // bottom left

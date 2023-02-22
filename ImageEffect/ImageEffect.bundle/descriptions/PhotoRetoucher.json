@@ -5,8 +5,18 @@
     },
     {
         "id": "blur",
+        "nextIDs": ["correct"],
         "filterDesc": {
             "type": "BlurFilter"
+        }
+    },
+    {
+        "id": "correct",
+        "filterDesc": {
+            "type": "CorrectSizeFilter",
+            "params": {
+                "CorrectSizeFilter_FlipY": "1"
+            }
         }
     }
 ]

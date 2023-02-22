@@ -34,6 +34,7 @@
 #define FilterType_Mesh "MeshFilter"
 #define FilterType_BackgroundMesh "BackgroundMeshFilter"
 #define FilterType_Sticker "StickerFilter"
+#define FilterType_CorrectSize "CorrectSizeFilter"
 #define FilterType_SmallHead "SmallHeadFilter"
 
 #define FilterParam_Brightness_Alpha FilterType_Brightness "_Alpha"
@@ -55,6 +56,7 @@
 #define FilterParam_Sharpen_Alpha FilterType_SharpenUSM "_SharpenAlpha"
 #define FilterParam_Sticker_Path FilterType_Sticker "_Path"
 #define FilterParam_Sticker_Alpha FilterType_Sticker "_Alpha"
+#define FilterParam_CorrectSize_FlipY FilterType_CorrectSize "_FlipY"
 #define FilterParam_SmallHead_Degree FilterType_SmallHead "_SmallHeadDegree"
 
 #endif /* FilterConstant_hpp */

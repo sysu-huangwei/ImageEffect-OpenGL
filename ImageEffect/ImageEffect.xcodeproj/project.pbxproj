@@ -16,6 +16,7 @@
 		3A8AC5D72931E0200078DF7E /* InputImageFrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC5D52931E0200078DF7E /* InputImageFrameBuffer.cpp */; };
 		3A8AC5DA2931EAC00078DF7E /* UIImage+TransferImageData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC5D92931EAC00078DF7E /* UIImage+TransferImageData.mm */; };
 		3A8AC5DD2938695C0078DF7E /* OutputFrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC5DB2938695C0078DF7E /* OutputFrameBuffer.cpp */; };
+		3AD6390E29A4FA470083BE25 /* CorrectSizeFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6390C29A4FA470083BE25 /* CorrectSizeFilter.cpp */; };
 		FC29E6A7273A20B0003F6696 /* BrightnessFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */; };
 		FC29E7AA273AAB31003F6696 /* EffectEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */; };
 		FC29E7B0273B6B4D003F6696 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = FC29E7AE273B6B4D003F6696 /* cJSON.c */; };
@@ -92,6 +93,8 @@
 		3A8AC5D92931EAC00078DF7E /* UIImage+TransferImageData.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+TransferImageData.mm"; sourceTree = "<group>"; };
 		3A8AC5DB2938695C0078DF7E /* OutputFrameBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OutputFrameBuffer.cpp; sourceTree = "<group>"; };
 		3A8AC5DC2938695C0078DF7E /* OutputFrameBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OutputFrameBuffer.hpp; sourceTree = "<group>"; };
+		3AD6390C29A4FA470083BE25 /* CorrectSizeFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CorrectSizeFilter.cpp; sourceTree = "<group>"; };
+		3AD6390D29A4FA470083BE25 /* CorrectSizeFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CorrectSizeFilter.hpp; sourceTree = "<group>"; };
 		FC29E6A5273A20B0003F6696 /* BrightnessFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrightnessFilter.cpp; sourceTree = "<group>"; };
 		FC29E6A6273A20B0003F6696 /* BrightnessFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrightnessFilter.hpp; sourceTree = "<group>"; };
 		FC29E7A8273AAB31003F6696 /* EffectEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectEngine.cpp; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				FCCA1F032739488200D5CFCA /* BackgroundMeshFilter.cpp */,
 				3A046C3429118C6C008BFE23 /* StickerFilter.hpp */,
 				3A046C3329118C6C008BFE23 /* StickerFilter.cpp */,
+				3AD6390D29A4FA470083BE25 /* CorrectSizeFilter.hpp */,
+				3AD6390C29A4FA470083BE25 /* CorrectSizeFilter.cpp */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				FCFCDACD27F6FA7A00A1092D /* VarianceFilter.cpp in Sources */,
 				FCCA1EBF273945CE00D5CFCA /* ImageEffect.m in Sources */,
 				FCFCDAD027F83BCA00A1092D /* GuidedSubFilter1.cpp in Sources */,
+				3AD6390E29A4FA470083BE25 /* CorrectSizeFilter.cpp in Sources */,
 				FCCA1F202739488200D5CFCA /* BackgroundMeshFilter.cpp in Sources */,
 				FCCA1F1B2739488200D5CFCA /* LutFilter.cpp in Sources */,
 				FCFCDAC727F6B6E600A1092D /* MultiplyFilter.cpp in Sources */,

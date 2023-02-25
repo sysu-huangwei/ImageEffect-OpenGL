@@ -23,6 +23,7 @@ void InputImageFrameBuffer::initWithRGBAImageData(unsigned char *rgbaData, int w
         if (textureID > 0) {
             FrameBuffer::init(width, height, true, defaultTextureOptions, textureID);
         }
+        isNeedReleaseTexture = true;
     }
 }
     

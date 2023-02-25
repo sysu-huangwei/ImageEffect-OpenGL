@@ -1,8 +1,8 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["blurH", "border"],
-        "nextTextureIndices": [0, 0]
+        "nextIDs": ["blurH"],
+        "nextTextureIndices": [0]
     },
     {
         "id": "blurH",
@@ -17,19 +17,11 @@
     },
     {
         "id": "blurV",
-        "nextIDs": ["border"],
-        "nextTextureIndices": [1],
         "filterDesc": {
             "type": "BlurSubFilter",
             "params": {
                 "BlurSubFilter_Direction": "1"
             }
-        }
-    },
-    {
-        "id": "border",
-        "filterDesc": {
-            "type": "BorderFilter"
         }
     }
 ]

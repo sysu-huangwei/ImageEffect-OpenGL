@@ -1,13 +1,13 @@
 [
     {
         "id": "begin",
-        "nextIDs": ["blur"]
+        "nextIDs": ["smooth"]
     },
     {
-        "id": "blur",
+        "id": "smooth",
         "nextIDs": ["correct"],
         "filterDesc": {
-            "type": "BlurFilter"
+            "type": "SmoothFilter"
         }
     },
     {

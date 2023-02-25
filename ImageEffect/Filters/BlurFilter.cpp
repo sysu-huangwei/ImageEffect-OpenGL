@@ -13,8 +13,26 @@
 namespace effect {
 
 BlurFilter::BlurFilter() {
-    std::string json = BaseGLUtils::getFilterDescriptionByName("BlurFilter");
-    nodeDescriptions = EffectConfigParser::parseJsonToDescription(json);
+    FilterNodeDescription begin = defaultBeginNodeDescription;
+    begin.nextIDs.push_back("blurH");
+    begin.nextTextureIndices.push_back(0);
+    
+    FilterNodeDescription blurH;
+    blurH.id = "blurH";
+    blurH.nextIDs.push_back("blurV");
+    blurH.nextTextureIndices.push_back(0);
+    blurH.filterDesc.type = FilterType_BlurSub;
+    blurH.filterDesc.params = {{FilterParam_BlurSub_Direction, "0"}};
+    
+    FilterNodeDescription blurV;
+    blurV.id = "blurV";
+    blurV.filterDesc.type = FilterType_BlurSub;
+    blurV.filterDesc.params = {{FilterParam_BlurSub_Direction, "1"}};
+    
+    
+    nodeDescriptions.push_back(begin);
+    nodeDescriptions.push_back(blurH);
+    nodeDescriptions.push_back(blurV);
 }
 
 void BlurFilter::setOutputSize(int outputWidth, int outputHeight) {

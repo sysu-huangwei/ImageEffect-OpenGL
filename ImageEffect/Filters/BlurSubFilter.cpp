@@ -9,7 +9,7 @@
 namespace effect {
 
 void BlurSubFilter::init() {
-    BaseFilter::initWithVertexStringAndFragmentString("sample_9x9", "blur_surface_9x9");
+    BaseFilter::initWithVertexStringAndFragmentString("sample_9x9", "blur_gaussian_9x9");
 }
 
 void BlurSubFilter::setOutputSize(int outputWidth, int outputHeight) {

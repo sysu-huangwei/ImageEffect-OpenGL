@@ -23,6 +23,7 @@
 #define FilterType_BlurSub "BlurSubFilter"
 #define FilterType_Blur "BlurFilter"
 #define FilterType_Mix "MixFilter"
+#define FilterType_Border "BorderFilter"
 #define FilterType_Smooth "SmoothFilter"
 #define FilterType_SharpenUSM "SharpenUSMFilter"
 #define FilterType_Point "PointFilter"

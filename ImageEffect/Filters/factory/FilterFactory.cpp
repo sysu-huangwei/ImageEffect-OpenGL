@@ -24,6 +24,7 @@
 #include "GuidedFilter.hpp"
 #include "BlurSubFilter.hpp"
 #include "BlurFilter.hpp"
+#include "BorderFilter.hpp"
 #include "MixFilter.hpp"
 #include "SmoothFilter.hpp"
 #include "PointFilter.hpp"
@@ -74,6 +75,8 @@ std::shared_ptr<BaseFilter> FilterFactory::createFilter(const FilterDescription 
         filter = std::make_shared<BlurFilter>();
     } else if (filterDesc.type == FilterType_Mix) {
         filter = std::make_shared<MixFilter>();
+    } else if (filterDesc.type == FilterType_Border) {
+        filter = std::make_shared<BorderFilter>();
     } else if (filterDesc.type == FilterType_Smooth) {
         filter = std::make_shared<SmoothFilter>();
     } else if (filterDesc.type == FilterType_Point) {

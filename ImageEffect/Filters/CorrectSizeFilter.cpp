@@ -1,6 +1,5 @@
 //
 //  CorrectSizeFilter.cpp
-//  ImageEffect
 //
 //  Created by rayyyhuang on 2023/2/21.
 //
